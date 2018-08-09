@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  spelare: one
+  spelare: one
+  spelare: one
+  place: one
+  turn: one
+  scenario: MyString
+
+two:
+  spelare: two
+  spelare: two
+  spelare: two
+  place: two
+  turn: two
+  scenario: MyString

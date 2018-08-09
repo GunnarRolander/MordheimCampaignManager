@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  typ: MyString
+  turn: one
+  spelare: one
+
+two:
+  typ: MyString
+  turn: two
+  spelare: two

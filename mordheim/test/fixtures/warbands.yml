@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  namn: MyString
+  typ: MyString
+  place: one
+  spelare: one
+
+two:
+  namn: MyString
+  typ: MyString
+  place: two
+  spelare: two
