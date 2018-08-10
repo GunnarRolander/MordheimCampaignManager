@@ -19,8 +19,10 @@ ActiveRecord::Schema.define(version: 2018_08_10_070028) do
     t.string "typ"
     t.bigint "turn_id"
     t.bigint "warband_id"
+    t.bigint "place_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["place_id"], name: "index_actions_on_place_id"
     t.index ["turn_id"], name: "index_actions_on_turn_id"
     t.index ["warband_id"], name: "index_actions_on_warband_id"
   end
@@ -95,6 +97,7 @@ ActiveRecord::Schema.define(version: 2018_08_10_070028) do
     t.index ["spelare_id"], name: "index_warbands_on_spelare_id"
   end
 
+  add_foreign_key "actions", "places"
   add_foreign_key "actions", "turns"
   add_foreign_key "actions", "warbands"
   add_foreign_key "battles", "places"

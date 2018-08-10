@@ -14,5 +14,6 @@ class Place < ApplicationRecord
                                               INNER JOIN "links" ON "places"."id" = "links"."place_id"
                                               WHERE "links"."linked_place_id" =  #{self.id} )}
   has_and_belongs_to_many :warbands
-  has_one :warband
+  has_one :controlling_warband, class_name: 'Warband'
+  has_many :actions
 end

@@ -4,5 +4,5 @@ class Warband < ApplicationRecord
   has_and_belongs_to_many :visited_places, class_name: 'Place'
   has_many :battles
   has_many :actions
-  has_many :places
+  has_many :controlled_places, class_name: 'Place'
 end

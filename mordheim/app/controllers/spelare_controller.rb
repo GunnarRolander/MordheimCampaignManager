@@ -1,0 +1,2 @@
+class SpelareController < ApplicationController
+end

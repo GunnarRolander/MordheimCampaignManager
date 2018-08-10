@@ -1,0 +1,2 @@
+module SpelareHelper
+end

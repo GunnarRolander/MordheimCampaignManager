@@ -7,6 +7,12 @@ class PlacesController < ApplicationController
     json_response(@places)
   end
 
+  def get_place
+    json_response(@place)
+  end
+
+  private
+
   def set_place
     @place = Place.find(params[:id])
   end
