@@ -1,0 +1,2 @@
+module WarbandsHelper
+end
