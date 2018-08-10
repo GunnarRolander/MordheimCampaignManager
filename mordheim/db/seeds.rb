@@ -19,6 +19,7 @@ p4 = Place.create(namn: 'Testarea 4', beskrivning: 'Testest')
 
 p.linked_places << [p4, p2]
 p2.linked_places << [p, p3]
+w.visited_places << p
 p.save
 
 

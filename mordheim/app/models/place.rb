@@ -13,5 +13,6 @@ class Place < ApplicationRecord
                                               SELECT DISTINCT "places".* FROM "places"
                                               INNER JOIN "links" ON "places"."id" = "links"."place_id"
                                               WHERE "links"."linked_place_id" =  #{self.id} )}
+  has_and_belongs_to_many :warbands
   has_one :warband
 end
