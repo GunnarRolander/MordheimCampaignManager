@@ -1,13 +1,21 @@
 class TurnsController < ApplicationController
     before_action :set_current_turn
 
-    def next_turn
-        new_turn = Turn.new()
-        new_turn.nummer = @current_turn.nummer + 1
-        new_turn.fas = "Order"
+    def get_turn
+        json_response(@current_turn)
     end
 
-    public
+    def next_turn
+        if @current_turn.fas == 'Strid'
+            new_turn = Turn.new()
+            new_turn.nummer = @current_turn.nummer + 1
+            new_turn.fas = "Ordergivning"
+            json_response('Ny turn')
+        else
+            json_response('Fel fas, byt fas först', 400)
+        end
+    end
+
     def next_phase
         @current_turn.fas = "Strid"
         @current_turn.save

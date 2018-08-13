@@ -6,6 +6,10 @@ class WarbandsController < ApplicationController
         json_response(@warbands)
     end
 
+    def get_warband
+        json_response(@warband)
+    end
+
     def visible_places
         visible_places = @warband.visited_places
         visible_places << @warband.place.linked_places
@@ -24,6 +28,10 @@ class WarbandsController < ApplicationController
 
     def get_coming_battles
         json_response(@warband.battles.where(winner: nil))
+    end
+
+    def get_fought_battles
+        json_response(@warband.battles)
     end
 
     private
