@@ -5,5 +5,7 @@ module Move
         warband.visited_places << place unless warband.visited_places.contains(place)
         warband.place = place
         warband.save
+        place.controlling_warband = warband
+        place.save
     end
 end

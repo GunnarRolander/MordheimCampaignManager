@@ -6,9 +6,10 @@ class ActionsController < ApplicationController
         destination = Place.find(params['destination_id'])
         json_response("Missing parameters", 400) if warband.nil? || destination.nil?
 
-        action = Action.find_or_create(warband: warband, turn: @current_turn)
+        action = Action.first_or_create(warband: warband, turn: @current_turn)
         action.place = destination
         action.typ = warband.place == destination ? "Remain" : "Move" 
         action.save
+        json_response("Recieved order")
     end
 end
