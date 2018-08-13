@@ -35,10 +35,13 @@ class TurnsController < ApplicationController
         actions.each do |action|
             destination = action.place
             if destination.controlling_warband != action.warband
+                # If the destination is uncontrolled, check for other warbands moving in.
                 if destination.controlling_warband.nil?
                     Action.where(place: destination, turn: @current_turn).not(warband: action.warband).each do |opposing_action|
                         Battle.first_or_create()
+                        # TODO: Fixa detta.
                     end
+                # If the controlling warband is nearby, create a battle.    
                 elsif destination.linked_places.contains(destination.controlling_warband.place)
                     b = Battle.new(place: action.place, turn: @current_turn)
                     b.warbands = [destination.controlling_warband, action.warband]
