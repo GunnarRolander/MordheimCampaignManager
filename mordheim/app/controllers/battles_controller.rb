@@ -1,4 +1,5 @@
 class BattlesController < ApplicationController
+    include Response, Move
     before_action :set_warband
     def get_battles
         json_response(Battle.where(attacker: @warband).or(defender: @warband))

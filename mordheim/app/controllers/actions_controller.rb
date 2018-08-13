@@ -1,4 +1,5 @@
 class ActionsController < ApplicationController
+    include Response
     def register_action
         @current_turn = Turn.last
         warband = Warband.find(params['warband_id'])

@@ -1,4 +1,6 @@
 class WarbandsController < ApplicationController
+    include Response
+    include Move
     before_action :set_warband
 
     def index
@@ -13,8 +15,8 @@ class WarbandsController < ApplicationController
     def visible_places
         visible_places = @warband.visited_places
         visible_places << @warband.place.linked_places
-        visible_places.uniq!
-        json_response(visible_places)
+        visible_places.uniq
+        json_response(visible_places.uniq)
     end
 
     def move_warband(destination_id)

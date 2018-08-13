@@ -1,4 +1,5 @@
 class TurnsController < ApplicationController
+    include Response
     before_action :set_current_turn
 
     def get_turn

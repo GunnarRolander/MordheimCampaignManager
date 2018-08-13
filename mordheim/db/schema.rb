@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_10_070028) do
+ActiveRecord::Schema.define(version: 2018_08_13_120042) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,19 +28,22 @@ ActiveRecord::Schema.define(version: 2018_08_10_070028) do
   end
 
   create_table "battles", force: :cascade do |t|
-    t.bigint "attacker_id"
-    t.bigint "defender_id"
     t.bigint "winner_id"
     t.bigint "place_id"
     t.bigint "turn_id"
     t.string "scenario"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["attacker_id"], name: "index_battles_on_attacker_id"
-    t.index ["defender_id"], name: "index_battles_on_defender_id"
     t.index ["place_id"], name: "index_battles_on_place_id"
     t.index ["turn_id"], name: "index_battles_on_turn_id"
     t.index ["winner_id"], name: "index_battles_on_winner_id"
+  end
+
+  create_table "battles_warbands", id: false, force: :cascade do |t|
+    t.bigint "battle_id", null: false
+    t.bigint "warband_id", null: false
+    t.index ["battle_id"], name: "index_battles_warbands_on_battle_id"
+    t.index ["warband_id"], name: "index_battles_warbands_on_warband_id"
   end
 
   create_table "links", id: false, force: :cascade do |t|
@@ -102,8 +105,5 @@ ActiveRecord::Schema.define(version: 2018_08_10_070028) do
   add_foreign_key "actions", "warbands"
   add_foreign_key "battles", "places"
   add_foreign_key "battles", "turns"
-  add_foreign_key "battles", "warbands", column: "attacker_id"
-  add_foreign_key "battles", "warbands", column: "defender_id"
-  add_foreign_key "battles", "warbands", column: "winner_id"
   add_foreign_key "links", "places"
 end

@@ -27,7 +27,9 @@ p.save
 
 t = Turn.create(nummer: 1, fas: "Strid")
 t2 = Turn.create(nummer: 2, fas: "Order")
-b = Battle.create(attacker: w, defender: w2, place: p2, turn: t)
+b = Battle.create(place: p2, turn: t2)
+b.warbands << [w, w2]
+b.save
 a = Action.create(turn: t, warband: w, place: p)
 a2 = Action.create(turn: t, warband: w2, place: p)
 

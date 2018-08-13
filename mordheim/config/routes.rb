@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # Warbands
   get 'warband/:warband_id', to: 'warbands#get_warband'
   get 'warband/:warband_id/visible_places', to: 'warbands#visible_places'
-  get 'warband/:warband_id/moveable_places', to: 'warbands#moveable_places'
+  get 'warband/:warband_id/moveable_places', to: 'warbands#get_moveable_places'
   get 'warband/:warband_id/coming_battles', to: 'warbands#get_coming_battles'
   get 'warband/:warband_id/fought_battles', to: 'warbands#get_fought_battles'
   post 'warband/:warband_id/move_warband', to: 'warbands#move_warband'

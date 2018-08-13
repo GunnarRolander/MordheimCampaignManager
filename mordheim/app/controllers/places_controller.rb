@@ -1,5 +1,6 @@
 class PlacesController < ApplicationController
-    before_action :set_place
+  include Response
+  before_action :set_place, only: :get_place
 
     # GET /todos
   def index
