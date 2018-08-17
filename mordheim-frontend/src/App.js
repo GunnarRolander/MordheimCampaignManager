@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {Grid, Row, Col, Button} from 'react-bootstrap';
+import AdministrationPanel from './Administration/AdministrationPanel.js'
+import Map from './Map/Map.js'
 import logo from './logo.svg';
 import './App.css';
 
@@ -12,7 +14,7 @@ class App extends Component {
         </header>
         <Grid>
           <Row className="show-grid">
-            <Col xs={12} md={8}>
+            <Col xs={6} md={8}>
               <Map></Map>
             </Col>
             <Col xs={6} md={4}>
