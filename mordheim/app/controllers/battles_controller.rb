@@ -2,7 +2,7 @@ class BattlesController < ApplicationController
     include Response, Move
     before_action :set_warband
     def get_battles
-        json_response(Battle.joins(:warbands).where('warbands.id' => @warband.id))
+        json_response(Battle.joins(:warbands).where('warbands.id' => @warband.id).to_json(:include => {:warbands => {}, :place => {}}))
     end
 
     def register_result

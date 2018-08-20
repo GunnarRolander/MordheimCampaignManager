@@ -30,6 +30,9 @@ t2 = Turn.create(nummer: 2, fas: "Order")
 b = Battle.create(place: p2, turn: t2)
 b.warbands << [w, w2]
 b.save
+b2 = Battle.create(place: p2, turn: t, winner: w)
+b2.warbands << [w, w2]
+b2.save
 a = Action.create(turn: t, warband: w, place: p)
 a2 = Action.create(turn: t, warband: w2, place: p)
 
