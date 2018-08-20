@@ -16,21 +16,33 @@ class BattleList extends Component {
         let finished_battles = this.state.battles.filter(battle => battle.winner_id != null)
         return(
         <div>
-            <Panel>
-                <Panel.Heading>Kommande strider</Panel.Heading>
-                <Panel.Body>
-                    {coming_battles.map(function(battle, index){
-                        return <Battle battle={battle}/>
-                    })}
-                </Panel.Body>
+            <Panel defaultExpanded={this.props.turn.fas == "Strid"}>
+                <Panel.Heading>
+                    <Panel.Title toggle>
+                        Kommande strider
+                    </Panel.Title>
+                </Panel.Heading>
+                <Panel.Collapse>
+                    <Panel.Body>
+                        {coming_battles.map(function(battle, index){
+                            return <Battle battle={battle}/>
+                        })}
+                    </Panel.Body>
+                </Panel.Collapse>
             </Panel>
             <Panel>
-                <Panel.Heading>Tidigare strider</Panel.Heading>
-                <Panel.Body>
-                    {finished_battles.map(function(battle, index){
-                        return <Battle battle={battle}/>
-                    })}
-                </Panel.Body>
+                <Panel.Heading>
+                    <Panel.Title toggle>
+                        Tidigare strider
+                    </Panel.Title>
+                </Panel.Heading>
+                <Panel.Collapse>
+                    <Panel.Body>
+                        {finished_battles.map(function(battle, index){
+                            return <Battle battle={battle}/>
+                        })}
+                    </Panel.Body>
+                </Panel.Collapse>
             </Panel>
         </div>
             
