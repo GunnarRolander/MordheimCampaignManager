@@ -11,4 +11,9 @@ class Warband < ApplicationRecord
     visible_places = [self.visited_places, self.place.linked_places].flatten
     return visible_places.uniq
   end
+
+  def current_action
+    turn = Turn.last
+    current_action = self.actions.where(turn: turn).includes(:place)
+  end
 end

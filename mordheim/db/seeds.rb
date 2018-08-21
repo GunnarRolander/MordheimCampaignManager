@@ -36,7 +36,7 @@ b2.save
 b3 = Battle.create(place: p4, turn: t2)
 b3.warbands << [w, w2]
 b3.save
-a = Action.create(turn: t, warband: w, place: p)
+a = Action.create(turn: t2, warband: w, place: p)
 a2 = Action.create(turn: t, warband: w2, place: p)
 
 
