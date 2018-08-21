@@ -21,7 +21,7 @@ class Battle extends Component {
                 {this.props.index == 0 ? null : <hr />}
                 <b>{this.props.battle.warbands[0].namn}</b> - <b>{this.props.battle.warbands[1].namn}</b><br/>
                 {this.props.battle.place.namn} ({this.props.battle.place.id})<br/>
-                {battle_fought ? "Vinnare: " + this.props.battle.winner.namn : <Button onClick={() => this._registerResult()}>Registrera resultat</Button>}
+                {battle_fought ? "Vinnare: " + this.props.battle.warbands[this.props.battle.winner_id].namn : <Button onClick={() => this._registerResult()}>Registrera resultat</Button>}
 
                 <BattleModal battle={this.props.battle} nearbyPlaces={this.state.nearbyPlaces} show={this.state.showModal} hide={() => this._onHideModal()}/>
             </div>

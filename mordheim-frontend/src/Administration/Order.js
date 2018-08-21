@@ -19,7 +19,7 @@ class Order extends Component {
                 <Panel.Collapse>
                     <Panel.Body>
                         <b>Runda {this.props.turn.nummer}</b><br/>
-                        Flytta till [AREA 52] (52)
+                   
                     </Panel.Body>
                 </Panel.Collapse>
             </Panel>
