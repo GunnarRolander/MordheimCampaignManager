@@ -6,4 +6,9 @@ class Warband < ApplicationRecord
   has_many :won_battles, class_name: 'Battle', :foreign_key => 'winner_id'
   has_many :actions
   has_many :controlled_places, class_name: 'Place'
+
+  def visible_places
+    visible_places = [self.visited_places, self.place.linked_places].flatten
+    return visible_places.uniq
+  end
 end

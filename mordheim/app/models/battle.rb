@@ -3,4 +3,8 @@ class Battle < ApplicationRecord
   belongs_to :winner, :class_name => 'Warband', optional: true
   belongs_to :place
   belongs_to :turn
+
+  def possible_retreats
+    self.place.linked_places.where(warband: self.place.warband)
+  end
 end
