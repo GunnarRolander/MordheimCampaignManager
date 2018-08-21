@@ -22,7 +22,7 @@ class AdministrationPanel extends Component {
                 </Row>
                 <Row>
                     <Col xs={6} md={4}>
-                        <Order turn={this.state.turn} action={this.props.warband.current_action}></Order>
+                        <Order turn={this.state.turn} warband={this.props.warband}></Order>
                     </Col>
                 </Row>
                 <Row>

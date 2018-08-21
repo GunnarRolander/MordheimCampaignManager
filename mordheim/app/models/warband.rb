@@ -14,6 +14,6 @@ class Warband < ApplicationRecord
 
   def current_action
     turn = Turn.last
-    current_action = self.actions.where(turn: turn).includes(:place)
+    current_action = self.actions.where(turn: turn)
   end
 end

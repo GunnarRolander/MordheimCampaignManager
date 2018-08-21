@@ -11,7 +11,10 @@ class WarbandsController < ApplicationController
     def get_warband
         json_response(@warband.to_json(
             :include => {
-                :place => {}, :battles => {
+                :place => {
+                    :include => {:linked_places => {}
+                    }
+                }, :battles => {
                     :include => {
                         :warbands => {}, :place => {}
                     }, 
