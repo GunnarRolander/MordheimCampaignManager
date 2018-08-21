@@ -17,8 +17,8 @@ p.save
 p2.warband_id = w2.id
 p2.save
 
-p3 = Place.create(namn: 'Testarea 3', beskrivning: 'Testest')
-p4 = Place.create(namn: 'Testarea 4', beskrivning: 'Testest')
+p3 = Place.create(namn: 'Testarea 3', beskrivning: 'Testest', warband: w2)
+p4 = Place.create(namn: 'Testarea 4', beskrivning: 'Testest', warband: w2)
 
 p.linked_places << [p4, p2]
 p2.linked_places << [p, p3]

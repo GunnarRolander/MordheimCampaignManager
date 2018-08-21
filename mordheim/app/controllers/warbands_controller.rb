@@ -9,7 +9,17 @@ class WarbandsController < ApplicationController
     end
 
     def get_warband
-        json_response(@warband.to_json(:include => {:place => {}}, :methods => [:visible_places, :current_action]))
+        json_response(@warband.to_json(
+            :include => {
+                :place => {}, :battles => {
+                    :include => {
+                        :warbands => {}, :place => {}
+                    }, 
+                    :methods => :possible_retreats
+                }
+            }, 
+            :methods => [:visible_places, :current_action])
+        )
     end
 
     def visible_places
