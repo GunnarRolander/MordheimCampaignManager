@@ -5,6 +5,8 @@ class OrderModal extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            moveToId: this.props.existingAction? this.props.existingAction.id : null,
+            orderText: null
         }
     }
 
@@ -18,11 +20,12 @@ class OrderModal extends Component {
                 <Modal.Body>
                     <form>
                     <FormGroup controlId="formControlsSelect">
-                        <ControlLabel>Flytta warband till:</ControlLabel>
-                        <FormControl componentClass="select" placeholder="Flytta till" onChange={(e) => this._onChange(e)}>
+                        <ControlLabel>Välj order</ControlLabel>
+                        <FormControl componentClass="select" placeholder="Flytta till" value={this.state.moveToId} onChange={(e) => this._onChange(e)}>
                             {this.props.nearbyPlaces.map(function(place, index){
-                                return <option value={place.id}>{place.namn}</option>
+                                return <option key={"orderOption"+index} value={place.id}>Flytta till {place.namn} ({place.nummer})</option>
                             })}
+                            <option key={"orderOptionNuvarande"} value={this.props.currentPlace.id}>Flyttar ej, stannar på {this.props.currentPlace.namn} ({this.props.currentPlace.nummer})</option>
                         </FormControl>
                     </FormGroup>
                     </form>
@@ -30,16 +33,21 @@ class OrderModal extends Component {
 
                 <Modal.Footer>
                     <Button onClick={()=> this._hide()}>Avbryt</Button>
-                    <Button bsStyle="primary">Skicka in</Button>
+                    <Button bsStyle="primary" onClick={() => this._sendOrder()}>Skicka in</Button>
                 </Modal.Footer>
             </Modal>
         </div>;
     }
 
-    _onChange(e) {        
+    _sendOrder(){
+        this.props.updateAction(this.state.orderText, this.state.moveToId)
+        this._hide()
+    }
+
+    _onChange(e) {      
         this.setState({
-            showLoserMove: showLoserMove,
-            loser: loser
+            moveToId: e.target.value,
+            orderText: e.target.selectedOptions[0].label
         })
     }
 

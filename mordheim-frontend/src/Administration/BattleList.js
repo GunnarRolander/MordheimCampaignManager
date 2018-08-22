@@ -26,7 +26,7 @@ class BattleList extends Component {
                 <Panel.Collapse>
                     <Panel.Body>
                         {coming_battles.map(function(battle, index){
-                            return <Battle battle={battle} index={index}/>
+                            return <Battle key={"cBattle"+index} battle={battle} index={index}/>
                         })}
                     </Panel.Body>
                 </Panel.Collapse>
@@ -40,7 +40,7 @@ class BattleList extends Component {
                 <Panel.Collapse>
                     <Panel.Body>
                         {finished_battles.map(function(battle, index){
-                            return <Battle battle={battle} index={index}/>
+                            return <Battle key={"fBattle"+index} battle={battle} index={index}/>
                         })}
                     </Panel.Body>
                 </Panel.Collapse>
