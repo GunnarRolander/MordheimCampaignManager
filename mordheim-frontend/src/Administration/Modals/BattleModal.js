@@ -40,7 +40,7 @@ class BattleModal extends Component {
 
                 <Modal.Footer>
                     <Button onClick={()=> this._hide()}>Avbryt</Button>
-                    <Button bsStyle="primary">Skicka in</Button>
+                    <Button bsStyle="primary" onClick={()=> this._saveResult()}>Skicka in</Button>
                 </Modal.Footer>
             </Modal>
         </div>;
@@ -53,8 +53,13 @@ class BattleModal extends Component {
         
         this.setState({
             showLoserMove: showLoserMove,
-            loser: loser
+            loser: loser,
+            winner_id: winner_id
         })
+    }
+
+    _saveResult(){
+        this.props.onNewResult(this.state.winner_id)
     }
 
     _hide() {

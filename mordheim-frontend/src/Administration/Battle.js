@@ -23,7 +23,7 @@ class Battle extends Component {
                 {this.props.battle.place.namn} ({this.props.battle.place.id})<br/>
                 {battle_fought ? "Vinnare: " + this.props.battle.warbands[this.props.battle.winner_id].namn : <Button onClick={() => this._registerResult()}>Registrera resultat</Button>}
 
-                <BattleModal battle={this.props.battle} nearbyPlaces={this.state.nearbyPlaces} show={this.state.showModal} hide={() => this._onHideModal()}/>
+                <BattleModal onNewResult={(wId) => this.props.onNewResult(wId)} battle={this.props.battle} nearbyPlaces={this.props.battle.possible_retreats} show={this.state.showModal} hide={() => this._onHideModal()}/>
             </div>
         )
     }
