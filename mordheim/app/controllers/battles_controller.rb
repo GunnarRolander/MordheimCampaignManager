@@ -1,6 +1,6 @@
 class BattlesController < ApplicationController
     include Response, Move
-    before_action :set_warband
+    before_action :authenticate, :set_warband
     def get_battles
         json_response(Battle.joins(:warbands).where('warbands.id' => @warband.id).to_json(:include => {:warbands => {}, :place => {}}, :methods => :possible_retreats))
     end
@@ -15,17 +15,17 @@ class BattlesController < ApplicationController
         if @warband != winner && @warband == defender
             loser_move_place = Place.find(params['loser_move_place_id'])
             json_response("Missing losers move", 400) if loser_move_place.nil?
-            move(@warband, loser_move_place)
+            move_warband(@warband, loser_move_place)
         end
         battle.winner = winner
         battle.save
-        move(winner, place)
+        move_warband(winner, battle.place)
     end
 
     private
 
     def set_warband
-        @warband = Warband.find(params['warband_id'])
+        @warband = @spelare.warband
         json_response("Missing warband_id", 400) if @warband.nil?
     end
 end

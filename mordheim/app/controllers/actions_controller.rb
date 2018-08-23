@@ -1,8 +1,9 @@
 class ActionsController < ApplicationController
     include Response
+    before_action :authenticate
     def register_action
         @current_turn = Turn.last
-        warband = Warband.find(params['warband_id'])
+        warband = @spelare.warband
         destination = Place.find(params['destination_id'])
         json_response("Missing parameters", 400) if warband.nil? || destination.nil?
 

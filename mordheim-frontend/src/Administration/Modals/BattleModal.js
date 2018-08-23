@@ -59,8 +59,32 @@ class BattleModal extends Component {
     }
 
     _saveResult(){
-        this._hide()
-        this.props.onNewResult(this.state.winner_id)
+        if(global.username && global.password) {
+            let authUrl = 'http://localhost:3000/battles/register_result'
+      
+            let headers = new Headers({
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            })
+      
+            //headers.append('Content-Type', 'text/json');
+            headers.append('Authorization', 'Basic ' + new Buffer(global.username + ":" + global.password).toString('base64'));
+      
+            fetch(authUrl, {method:'POST',
+                headers: headers,
+                body: JSON.stringify({
+                    winner_id: this.state.winner_id,
+                    battle_id: this.props.battle.id
+                })
+            }).then((rsp) => {
+                if (rsp.status == 200 || rsp.status == 204) {
+                    this._hide()
+                    this.props.onNewResult(this.state.winner_id)
+                } else {
+                    throw new Error("Failed logon")
+                }
+            })
+        }
 
     }
 

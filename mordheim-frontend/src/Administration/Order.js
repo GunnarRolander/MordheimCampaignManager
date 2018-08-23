@@ -54,10 +54,38 @@ class Order extends Component {
         })
     }
 
-    _updateAction(label, id) {
-        console.log(label, id)
+    _updateAction(label, place_id) {
+
+        if(global.username && global.password) {
+            let authUrl = 'http://localhost:3000/actions/register_action'
+      
+            let headers = new Headers({
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            })
+      
+            //headers.append('Content-Type', 'text/json');
+            headers.append('Authorization', 'Basic ' + new Buffer(global.username + ":" + global.password).toString('base64'));
+      
+            fetch(authUrl, {method:'POST',
+                headers: headers,
+                body: JSON.stringify({
+                    warband_id: this.props.warband.id,
+                    destination_id: place_id
+                })
+            }).then((rsp) => {
+                if (rsp.status == 200) {
+                    rsp.json().then((data) =>{
+                    })
+                } else {
+                    throw new Error("Failed logon")
+                }
+            })
+        }
+
+        console.log(label, place_id)
         let newAction = this.state.action || {}
-        newAction.id = id
+        newAction.place_id = place_id
         this.setState({
             orderText: label,
             action: newAction
