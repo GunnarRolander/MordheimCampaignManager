@@ -1,7 +1,7 @@
 class WarbandsController < ApplicationController
     include Response
     include Move
-    before_action :set_warband
+    before_action :authenticate, :set_warband
 
     def index
         @warbands = Warband.all
@@ -52,7 +52,8 @@ class WarbandsController < ApplicationController
     private
 
     def set_warband
-        @warband = Warband.find(params[:warband_id])
+
+        @warband = @spelare.warband
         json_response("Missing warband_id", 400) if @warband.nil?
     end
 

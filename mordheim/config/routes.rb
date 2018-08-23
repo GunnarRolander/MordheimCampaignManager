@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   # Warbands
-  get 'warband/:warband_id', to: 'warbands#get_warband'
+  get 'warband', to: 'warbands#get_warband'
   get 'warband/:warband_id/visible_places', to: 'warbands#visible_places'
   get 'warband/:warband_id/moveable_places', to: 'warbands#get_moveable_places'
   get 'warband/:warband_id/coming_battles', to: 'warbands#get_coming_battles'
