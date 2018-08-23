@@ -27,10 +27,10 @@ class App extends Component {
         {this.state.authenticated ? 
           <Grid>
             <Row className="show-grid">
-              <Col xs={6} md={8}>
+              <Col xs={6} md={9}>
                 <Map></Map>
               </Col>
-              <Col xs={6} md={4}>
+              <Col xs={6} md={3}>
                 <AdministrationPanel warband={this.state.warband}></AdministrationPanel>
               </Col>
             </Row>
