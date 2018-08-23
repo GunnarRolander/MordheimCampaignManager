@@ -11,6 +11,7 @@ class BattleList extends Component {
     }
 
     render() {
+        console.log(this.state.battles)
         let coming_battles = this.state.battles.filter(battle => battle.winner_id == null)
         let finished_battles = this.state.battles.filter(battle => battle.winner_id != null)
         return(
@@ -23,8 +24,8 @@ class BattleList extends Component {
                 </Panel.Heading>
                 <Panel.Collapse>
                     <Panel.Body>
-                        {coming_battles.map(function(battle, index){
-                            return <Battle key={"cBattle"+index} battle={battle} index={index} onNewResult={(winner_id) => {this._onNewResult(battle.id, winner_id)}}/>
+                        {coming_battles.map((battle, index) => {
+                            return <Battle onNewResult={(winner_id) => this._onNewResult(battle.id, winner_id)} key={"cBattle"+index} battle={battle} index={index}/>
                         })}
                     </Panel.Body>
                 </Panel.Collapse>
@@ -50,7 +51,7 @@ class BattleList extends Component {
 
     _onNewResult(battle_id, winner_id){
         let battles = this.state.battles
-        battles.find(b => b.id = battle_id).winner_id = winner_id
+        battles.find(b => b.id == battle_id).winner_id = parseInt(winner_id, 10) 
 
         this.setState({
             battles: battles

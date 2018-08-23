@@ -6,8 +6,7 @@ class Battle extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            showModal: false,
-            nearbyPlaces: [{"id":4,"namn":"Testarea 4","beskrivning":"Testest","latlng":null,"warband_id":null,"created_at":"2018-08-21T07:33:25.122Z","updated_at":"2018-08-21T07:33:25.122Z"}]
+            showModal: false
         }
     }
 
@@ -21,9 +20,9 @@ class Battle extends Component {
                 {this.props.index == 0 ? null : <hr />}
                 <b>{this.props.battle.warbands[0].namn}</b> - <b>{this.props.battle.warbands[1].namn}</b><br/>
                 {this.props.battle.place.namn} ({this.props.battle.place.id})<br/>
-                {battle_fought ? "Vinnare: " + this.props.battle.warbands[this.props.battle.winner_id].namn : <Button onClick={() => this._registerResult()}>Registrera resultat</Button>}
+                {battle_fought ? "Vinnare: " + this.props.battle.warbands.find(w => w.id == this.props.battle.winner_id).namn : <Button onClick={() => this._registerResult()}>Registrera resultat</Button>}
 
-                <BattleModal onNewResult={(wId) => this.props.onNewResult(wId)} battle={this.props.battle} nearbyPlaces={this.props.battle.possible_retreats} show={this.state.showModal} hide={() => this._onHideModal()}/>
+                <BattleModal onNewResult={(winner_id) => this.props.onNewResult(winner_id)} battle={this.props.battle} nearbyPlaces={this.props.battle.possible_retreats} show={this.state.showModal} hide={() => this._onHideModal()}/>
             </div>
         )
     }

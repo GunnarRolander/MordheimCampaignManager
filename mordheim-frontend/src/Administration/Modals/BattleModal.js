@@ -59,7 +59,9 @@ class BattleModal extends Component {
     }
 
     _saveResult(){
+        this._hide()
         this.props.onNewResult(this.state.winner_id)
+
     }
 
     _hide() {
