@@ -21,7 +21,7 @@ class WarbandsController < ApplicationController
                     :methods => :possible_retreats
                 }
             }, 
-            :methods => [:visible_places, :current_action])
+            :methods => [:visible_places, :visible_links, :current_action])
         )
     end
 

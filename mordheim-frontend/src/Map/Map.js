@@ -47,6 +47,19 @@ class Map extends React.Component {
     map.addLayer(layerBounds)
     imageOverlay.bringToBack()
 
+    this.props.visiblePlaces.map((place) => {
+      let marker = L.circleMarker([place.lat, place.lng])
+        .addTo(layerBounds)
+    })
+    let visiblePlaces = this.props.visiblePlaces
+    this.props.visibleLinks.map((link) => {
+      let place = visiblePlaces.find(p => p.id == link[0])
+      let linked_place = visiblePlaces.find(p => p.id == link[1])
+
+      let marker = L.polyline([[place.lat, place.lng],[linked_place.lat, linked_place.lng]])
+        .addTo(layerBounds)
+    })
+
     // set markers on click events in the map
     map.on('click', function (event) {
       let coords = event.latlng

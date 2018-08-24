@@ -8,8 +8,8 @@
 
 s = Spelare.create(namn: 'Gunnar', password: 'bananer', admin: true)
 s2 = Spelare.create(namn: 'Jens', password: 'bananer', admin: true)
-p = Place.create(namn: 'Testarea 1', beskrivning: 'Testest')
-p2 = Place.create(namn: 'Testarea 2', beskrivning: 'Testest')
+p = Place.create(namn: 'Testarea 1', beskrivning: 'Testest', lat: -177, lng: 156)
+p2 = Place.create(namn: 'Testarea 2', beskrivning: 'Testest', lat: -161, lng: 201)
 w = s.create_warband!(namn: 'Hexenjaeger', typ: 'Witch Hunters', place_id: p.id)
 w2 = s2.create_warband!(namn: 'Sigmarssystrarna', typ: 'Sisters of Sigmar', place_id: p2.id)
 p.warband_id = w.id
@@ -17,8 +17,8 @@ p.save
 p2.warband_id = w2.id
 p2.save
 
-p3 = Place.create(namn: 'Testarea 3', beskrivning: 'Testest', warband: w2)
-p4 = Place.create(namn: 'Testarea 4', beskrivning: 'Testest', warband: w2)
+p3 = Place.create(namn: 'Testarea 3', beskrivning: 'Testest', warband: w2, lat: -150, lng: 134)
+p4 = Place.create(namn: 'Testarea 4', beskrivning: 'Testest', warband: w2, lat: -128, lng: 168)
 
 p.linked_places << [p4, p2]
 p2.linked_places << [p, p3]

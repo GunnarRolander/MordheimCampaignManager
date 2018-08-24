@@ -12,6 +12,14 @@ class Warband < ApplicationRecord
     return visible_places.uniq
   end
 
+  def visible_links 
+    ids = Array.new
+    visible_places.each do |place|
+      ids << place.id
+    end
+    return Link.where(place_id: ids, linked_place_id: ids).all.pluck(:place_id, :linked_place_id)
+  end
+
   def current_action
     turn = Turn.last
     current_action = self.actions.where(turn: turn)

@@ -28,7 +28,7 @@ class App extends Component {
           <Grid>
             <Row className="show-grid">
               <Col xs={6} md={9}>
-                <Map></Map>
+                <Map visiblePlaces={this.state.warband.visible_places} visibleLinks={this.state.warband.visible_links}></Map>
               </Col>
               <Col xs={6} md={3}>
                 <AdministrationPanel warband={this.state.warband}></AdministrationPanel>

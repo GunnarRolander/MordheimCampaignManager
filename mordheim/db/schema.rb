@@ -60,7 +60,8 @@ ActiveRecord::Schema.define(version: 2018_08_13_120042) do
   create_table "places", force: :cascade do |t|
     t.string "namn"
     t.string "beskrivning"
-    t.string "latlng"
+    t.float "lat"
+    t.float "lng"
     t.bigint "warband_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
