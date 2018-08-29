@@ -4,12 +4,16 @@ import 'leaflet-rastercoords'
 import 'leaflet-css'
 import {Grid, Row, Col, Button, Panel} from 'react-bootstrap';
 import img from '../MordheimMap.png'
+import PlaceInfoModal from './PlaceInfoModal.js'
 
 class Map extends React.Component {
   constructor(props) {
     super(props);
+    this.map = null;
     this.state = {
-        map: null
+        map: null,
+        showMapModal: false,
+        mapInfoPlace: null
     }
   }
 
@@ -33,52 +37,59 @@ class Map extends React.Component {
     let bounds = new L.LatLngBounds(southWest, northEast);
     // add the image overlay, 
     // so that it covers the entire map
+    //map.createPane('tooltips');
+    //map.getPane('tooltips').style.zIndex = -1;
+
+    // tell leaflet that the map is exactly as big as the image
+    map.setMaxBounds(bounds);
+
     map.createPane('imagebg');
     map.getPane('imagebg').style.zIndex = 50;
-
     let imageOverlay = L.imageOverlay(url, bounds,{
       pane: 'imagebg'
     })
     map.addLayer(imageOverlay)
-    // tell leaflet that the map is exactly as big as the image
-    map.setMaxBounds(bounds);
-
+    imageOverlay.bringToBack()
+    
     let layerBounds = L.layerGroup()
     map.addLayer(layerBounds)
-    imageOverlay.bringToBack()
 
+    
     this.props.visiblePlaces.map((place) => {
-      let marker = L.circleMarker([place.lat, place.lng])
-        .addTo(layerBounds)
+      let marker = L.circleMarker([place.lat, place.lng], {color: '#000000', opacity: 0.6, onEachFeature: (feature, graphic) => {
+        graphic.on('click', (e) => {
+          alert("KLICK!");
+          this._showMapModal(place);
+        })
+      }})
+      //marker.bindTooltip(place.namn, {permanent: true, className: "my-label", offset: [0, 0], pane: 'tooltips' }).openTooltip();
+      marker.addTo(layerBounds)
     })
     let visiblePlaces = this.props.visiblePlaces
     this.props.visibleLinks.map((link) => {
       let place = visiblePlaces.find(p => p.id == link[0])
       let linked_place = visiblePlaces.find(p => p.id == link[1])
 
-      let marker = L.polyline([[place.lat, place.lng],[linked_place.lat, linked_place.lng]])
-        .addTo(layerBounds)
+      let marker = L.polyline([[place.lat, place.lng],[linked_place.lat, linked_place.lng]], {color: '#000000', opacity: 0.6})
+      marker.addTo(layerBounds)
     })
 
     // set markers on click events in the map
-    map.on('click', function (event) {
+    /*map.on('click', function (event) {
       let coords = event.latlng
       let marker = L.circleMarker(coords)
-        .addTo(layerBounds)
+      .addTo(layerBounds)
       marker.bindPopup('[' + Math.floor(coords.lat) + ',' + Math.floor(coords.lng) + ']')
-        .openPopup()
-    })
-  
+      .openPopup()
+    })*/
+    
     // add layer control object
     L.control.layers({}, {
       'Bounds': layerBounds,
       'image' : imageOverlay
     }).addTo(map)
 
-    this.setState({
-      map: map
-    })
-
+    this.map = map;
     // assign map and image dimensions
     //let rc = new L.RasterCoords(map, img)
     // set max zoom Level (might be `x` if gdal2tiles was called with `-z 0-x` option)
@@ -94,12 +105,27 @@ class Map extends React.Component {
   render() {
     return <div>
       <div style={{height: "600px"}} id="image-map"></div>
-      <Button onClick={() => this._addCircleMarker([100, 100])}>Lägg till</Button>
+      <PlaceInfoModal show={this.state.showMapModal} hide={() => this._hideMapModal()} place={this.state.mapInfoPlace}></PlaceInfoModal>
     </div>
   }
 
+  
+
   _addCircleMarker(latlng){
     let marker = new L.circleMarker(latlng).addTo(this.state.map)
+  }
+
+  _showMapModal(place) {
+    this.setState({
+      showMapModal: true,
+      mapInfoPlace: place
+    })
+  }
+
+  _hideMapModal(){
+    this.setState({
+      showMapModal: false
+    })
   }
 }
 
