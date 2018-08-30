@@ -45,6 +45,7 @@ class TurnsController < ApplicationController
                 elsif destination.linked_places.contains(destination.controlling_warband.place)
                     b = Battle.new(place: action.place, turn: @current_turn)
                     b.warbands = [destination.controlling_warband, action.warband]
+                    b.save
                 end
             end
         end
