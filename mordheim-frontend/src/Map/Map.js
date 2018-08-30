@@ -45,26 +45,21 @@ class Map extends React.Component {
 
     map.createPane('imagebg');
     map.getPane('imagebg').style.zIndex = 50;
+    map.getPane('imagebg').style.pointerEvents = 'none';
     let imageOverlay = L.imageOverlay(url, bounds,{
-      pane: 'imagebg'
+      pane: 'imagebg',
+      zIndex: 49,
+      interactive: false
     })
     map.addLayer(imageOverlay)
     imageOverlay.bringToBack()
     
-    let layerBounds = L.layerGroup()
-    map.addLayer(layerBounds)
+    map.createPane('circleMarkers');
+    map.getPane('circleMarkers').style.zIndex = -11;
 
+    let layerBounds = L.layerGroup(null, {pane: 'circleMarkers'})
+    map.addLayer(layerBounds)
     
-    this.props.visiblePlaces.map((place) => {
-      let marker = L.circleMarker([place.lat, place.lng], {color: '#000000', opacity: 0.6, onEachFeature: (feature, graphic) => {
-        graphic.on('click', (e) => {
-          alert("KLICK!");
-          this._showMapModal(place);
-        })
-      }})
-      //marker.bindTooltip(place.namn, {permanent: true, className: "my-label", offset: [0, 0], pane: 'tooltips' }).openTooltip();
-      marker.addTo(layerBounds)
-    })
     let visiblePlaces = this.props.visiblePlaces
     this.props.visibleLinks.map((link) => {
       let place = visiblePlaces.find(p => p.id == link[0])
@@ -72,13 +67,34 @@ class Map extends React.Component {
 
       let marker = L.polyline([[place.lat, place.lng],[linked_place.lat, linked_place.lng]], {color: '#000000', opacity: 0.6})
       marker.addTo(layerBounds)
+      
+    })
+    
+    visiblePlaces.map((place) => {
+      let marker = L.circleMarker([place.lat, place.lng], {color: '#000000', opacity: 0.6}
+      )
+      marker.addTo(layerBounds)
+    })
+
+    visiblePlaces.map((place) => {
+      let marker = L.marker([place.lat-2, place.lng], {color: '#000000', opacity: 0.6}
+      )
+      marker.on('click', (e) => {
+        alert("KLICK!");
+        this._showMapModal(place);
+      })
+      marker.addTo(layerBounds)
     })
 
     // set markers on click events in the map
     /*map.on('click', function (event) {
       let coords = event.latlng
-      let marker = L.circleMarker(coords)
+      let marker = L.marker(coords)
       .addTo(layerBounds)
+      marker.on('mouseover', (e) => {
+        alert("KLICK!");
+        //this._showMapModal(visiblePlaces[0]);
+      })
       marker.bindPopup('[' + Math.floor(coords.lat) + ',' + Math.floor(coords.lng) + ']')
       .openPopup()
     })*/

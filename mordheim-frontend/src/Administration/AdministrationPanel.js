@@ -8,16 +8,23 @@ class AdministrationPanel extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            turn: {"id":2,"nummer":2,"fas":"Order","created_at":"2018-08-20T09:19:11.455Z","updated_at":"2018-08-20T09:19:11.455Z"}
+            turn: null
         }
+    }
+    
+    componentDidMount() {
+        this._getTurn();
     }
 
     render() {
+        if (this.state.turn == null) {
+            return <div></div>
+        }
         return(
             <Grid>
                 <Row>
                     <Col xs={6} md={4}>
-                        <TurnCounter turn={this.state.turn}></TurnCounter>
+                        <TurnCounter turn={this.state.turn} isAdmin={true} getTurn={() => this._getTurn()}></TurnCounter>
                     </Col>
                 </Row>
                 <Row>
@@ -32,6 +39,34 @@ class AdministrationPanel extends Component {
                 </Row>
             </Grid>
         )
+    }
+
+    _getTurn() {
+        if(global.username && global.password) {
+            let authUrl = 'http://localhost:3000/turn'
+      
+            let headers = new Headers({
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            })
+      
+            //headers.append('Content-Type', 'text/json');
+            headers.append('Authorization', 'Basic ' + new Buffer(global.username + ":" + global.password).toString('base64'));
+      
+            fetch(authUrl, {method:'GET',
+                headers: headers
+            }).then((rsp) => {
+                if (rsp.status == 200) {
+                    rsp.json().then((data) =>{
+                        this.setState({                          
+                          turn: data                          
+                        })
+                      })               
+                } else {
+                    throw new Error("Failed authentication")
+                }
+            })
+        }
     }
 }
 

@@ -23,7 +23,7 @@ class Order extends Component {
             }
         }
         return(
-            <Panel defaultExpanded={this.props.turn.fas == "Order"}>
+            <Panel defaultExpanded={this.props.turn.fas == "Ordergivning"}>
                 <Panel.Heading>
                     <Panel.Title toggle>
                         Order

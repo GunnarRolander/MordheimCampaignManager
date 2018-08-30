@@ -20,3 +20,7 @@
 .my-label {
   z-index: 1;
 }
+
+.leaflet-zoom-animated, .leaflet-interactive {
+  z-index: -15;
+}

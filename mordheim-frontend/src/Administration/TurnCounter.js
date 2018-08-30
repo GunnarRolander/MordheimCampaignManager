@@ -7,12 +7,49 @@ class TurnCounter extends Component {
     }
 
     render() {
+        if (this.props.turn == null) {
+            return <div></div>
+        }
         return(
             <Panel>
-                <Panel.Heading>Turn {this.props.turn.nummer}</Panel.Heading>
+                <Panel.Heading>Runda {this.props.turn.nummer}</Panel.Heading>
                 <Panel.Body>Fas: {this.props.turn.fas}</Panel.Body>
+                {this.props.isAdmin ? 
+                <Panel.Footer>
+                    <Button onClick={() => this._nextClick()}>{this.props.turn.fas == "Ordergivning" ? 
+                    "Nästa fas" 
+                    : "Nästa runda"}</Button>
+                </Panel.Footer> 
+                : null}
             </Panel>
         );
+    }
+
+    _nextClick() {
+        if(global.username && global.password) {
+            let authUrl = 'http://localhost:3000/turn/next_turn'
+            if(this.props.turn.fas == "Ordergivning") {
+                authUrl = 'http://localhost:3000/turn/next_phase'
+            }
+      
+            let headers = new Headers({
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            })
+      
+            //headers.append('Content-Type', 'text/json');
+            headers.append('Authorization', 'Basic ' + new Buffer(global.username + ":" + global.password).toString('base64'));
+      
+            fetch(authUrl, {method:'POST',
+                headers: headers
+            }).then((rsp) => {
+                if (rsp.status == 200 || rsp.status == 204) {
+                    this.props.getTurn()                    
+                } else {
+                    throw new Error("Failed authentication")
+                }
+            })
+        }
     }
 }
 
