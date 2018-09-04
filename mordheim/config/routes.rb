@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'warband/:warband_id/coming_battles', to: 'warbands#get_coming_battles'
   get 'warband/:warband_id/fought_battles', to: 'warbands#get_fought_battles'
   post 'warband/:warband_id/move_warband', to: 'warbands#move_warband'
+  post 'warband/create', to: 'warbands#create_warband'
 
   # Actions
   post 'actions/register_action', to: 'actions#register_action'

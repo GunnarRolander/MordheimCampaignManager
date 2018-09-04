@@ -3,6 +3,7 @@ class CreateWarbands < ActiveRecord::Migration[5.2]
     create_table :warbands do |t|
       t.string :namn
       t.string :typ
+      t.string :colour
       t.references :place, foreign_key: false
       t.references :spelare, foreign_key: false
 

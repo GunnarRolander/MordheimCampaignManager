@@ -10,23 +10,24 @@ s = Spelare.create(namn: 'Gunnar', password: 'bananer', admin: true)
 s2 = Spelare.create(namn: 'Jens', password: 'bananer', admin: true)
 p = Place.create(namn: 'Testarea 1', beskrivning: 'Testest', lat: -177, lng: 156)
 p2 = Place.create(namn: 'Testarea 2', beskrivning: 'Testest', lat: -161, lng: 201)
-w = s.create_warband!(namn: 'Hexenjaeger', typ: 'Witch Hunters', place_id: p.id)
-w2 = s2.create_warband!(namn: 'Sigmarssystrarna', typ: 'Sisters of Sigmar', place_id: p2.id)
-p.warband_id = w.id
-p.save
-p2.warband_id = w2.id
-p2.save
+#w = s.create_warband!(namn: 'Hexenjaeger', typ: 'Witch Hunters', colour: '#800000', place_id: p.id)
+#w2 = s2.create_warband!(namn: 'Sigmarssystrarna', typ: 'Sisters of Sigmar', colour: '#dfbe9f', place_id: p2.id)
+#p.warband_id = w.id
+#p.save
+#p2.warband_id = w2.id
+#p2.save
 
 p3 = Place.create(namn: 'Testarea 3', beskrivning: 'Testest', lat: -150, lng: 134)
 p4 = Place.create(namn: 'Testarea 4', beskrivning: 'Testest', lat: -128, lng: 168)
-w2.visited_places << p2
+#w.visited_places << p4
+#w2.visited_places << p2
 
 
 p.linked_places << [p4, p2]
 p2.linked_places << [p, p3]
 p3.linked_places << [p2, p4]
 p4.linked_places << [p, p3]
-w.visited_places << p
+#w.visited_places << p
 p.save
 
 t = Turn.create(nummer: 1, fas: "Ordergivning")

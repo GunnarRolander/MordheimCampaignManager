@@ -5,6 +5,7 @@ import Map from './Map/Map.js'
 import logo from './logo.svg';
 import './App.css';
 import LoginModal from './LoginModal.js'
+import CreateWarbandModal from './CreateWarbandModal.js';
 
 class App extends Component {
   constructor(props) {
@@ -19,16 +20,18 @@ class App extends Component {
   }
 
   render() {
+    let showMapAndAdmin = this.state.authenticated && this.state.warband.id != null
+    let showCreateWarbandModal = this.state.authenticated && this.state.warband.id == null
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Kulagheim!</h1>
         </header>
-        {this.state.authenticated ? 
+        {showMapAndAdmin ? 
           <Grid>
             <Row className="show-grid">
               <Col xs={6} md={9}>
-                <Map visiblePlaces={this.state.warband.visible_places} visibleLinks={this.state.warband.visible_links}></Map>
+                <Map visiblePlaces={this.state.warband.visible_places} visibleLinks={this.state.warband.visible_links} colours={this.state.warband.visible_warband_colours}></Map>
               </Col>
               <Col xs={6} md={3}>
                 <AdministrationPanel warband={this.state.warband}></AdministrationPanel>
@@ -37,6 +40,7 @@ class App extends Component {
           </Grid> 
         : null}
         <LoginModal show={this.state.showLoginModal} hide={()=> this._hideModal()} authenticate={(username, password) => this._authenticate(username, password)}></LoginModal>
+        <CreateWarbandModal show={showCreateWarbandModal} hide={()=> this._hideModal()} getWarband={() => this._authenticate(this.state.username, this.state.password)}/>
       </div>
     );
   }

@@ -65,13 +65,13 @@ class Map extends React.Component {
       let place = visiblePlaces.find(p => p.id == link[0])
       let linked_place = visiblePlaces.find(p => p.id == link[1])
 
-      let marker = L.polyline([[place.lat, place.lng],[linked_place.lat, linked_place.lng]], {color: '#000000', opacity: 0.6})
+      let marker = L.polyline([[place.lat, place.lng],[linked_place.lat, linked_place.lng]], {color: '#101010', opacity: 0.6})
       marker.addTo(layerBounds)
       
     })
     
     visiblePlaces.map((place) => {
-      let marker = L.circleMarker([place.lat, place.lng], {color: '#000000', opacity: 0.6}
+      let marker = L.circleMarker([place.lat, place.lng], {color: "#101010", fillColor: this._getColour(place.warband_id), opacity: 0.9, fillOpacity: 1}
       )
       marker.addTo(layerBounds)
     })
@@ -80,7 +80,6 @@ class Map extends React.Component {
       let marker = L.marker([place.lat-2, place.lng], {color: '#000000', opacity: 0.6}
       )
       marker.on('click', (e) => {
-        alert("KLICK!");
         this._showMapModal(place);
       })
       marker.addTo(layerBounds)
@@ -125,7 +124,13 @@ class Map extends React.Component {
     </div>
   }
 
-  
+  _getColour(warband_id) {
+    let colour = this.props.colours[warband_id]
+    if (colour == null) {
+      colour = "#808080"
+    }
+    return colour
+  }
 
   _addCircleMarker(latlng){
     let marker = new L.circleMarker(latlng).addTo(this.state.map)

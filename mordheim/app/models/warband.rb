@@ -20,6 +20,15 @@ class Warband < ApplicationRecord
     return Link.where(place_id: ids, linked_place_id: ids).all.pluck(:place_id, :linked_place_id)
   end
 
+  def visible_warband_colours
+    colour_hash = {}
+    visible_places.each do |place|
+      next if place.warband.nil?
+      colour_hash[place.warband_id] = place.warband.colour
+    end
+    return colour_hash
+  end
+
   def current_action
     turn = Turn.last
     current_action = self.actions.where(turn: turn)

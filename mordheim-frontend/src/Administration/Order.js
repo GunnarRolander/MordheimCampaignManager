@@ -6,9 +6,9 @@ class Order extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            action: this.props.action,
+            action: this.props.warband.current_action,
             showModal: false,
-            orderText: null
+            orderText: this._generateOrderText(this.props.warband.current_action[0])
         }
     }
 
@@ -52,6 +52,18 @@ class Order extends Component {
         this.setState({
             showModal: false
         })
+    }
+
+    _generateOrderText(action){
+        if (action == null) {
+            return null
+        }
+        let place = this.props.warband.visible_places.find(x => x.id == action.place_id)
+        if (action.typ == "Remain") {
+            return "Flyttar ej, stannar på " + place.namn + " (" + place.id + ")"
+        } else {
+            return "Flytta till "+ place.namn + " (" + place.id + ")"
+        }
     }
 
     _updateAction(label, place_id) {

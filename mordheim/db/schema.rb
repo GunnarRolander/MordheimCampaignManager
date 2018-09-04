@@ -93,6 +93,7 @@ ActiveRecord::Schema.define(version: 2018_08_13_120042) do
   create_table "warbands", force: :cascade do |t|
     t.string "namn"
     t.string "typ"
+    t.string "colour"
     t.bigint "place_id"
     t.bigint "spelare_id"
     t.datetime "created_at", null: false

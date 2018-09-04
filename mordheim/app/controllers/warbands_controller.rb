@@ -1,11 +1,23 @@
 class WarbandsController < ApplicationController
     include Response
     include Move
-    before_action :authenticate, :set_warband
+    before_action :authenticate
+    before_action :set_warband, except: :create_warband
 
     def index
         @warbands = Warband.all
         json_response(@warbands)
+    end
+
+    def create_warband
+        starting_place = [Place.find(1), Place.find(2)].select {|p| p.warband.nil? }.sample
+        w = @spelare.create_warband!(namn: params['warband_name'], typ: params['warband_type'], 
+            colour: params['colour'], place: starting_place)
+        w.visited_places << starting_place
+        w.save
+        starting_place.warband = w
+        starting_place.save
+        json_response("Warband created successfully")
     end
 
     def get_warband
@@ -21,7 +33,7 @@ class WarbandsController < ApplicationController
                     :methods => :possible_retreats
                 }
             }, 
-            :methods => [:visible_places, :visible_links, :current_action])
+            :methods => [:visible_places, :visible_links, :current_action, :visible_warband_colours])
         )
     end
 
@@ -54,7 +66,7 @@ class WarbandsController < ApplicationController
     def set_warband
 
         @warband = @spelare.warband
-        json_response("Missing warband_id", 400) if @warband.nil?
+        json_response("Create new warband".to_json, 200) if @warband.nil?
     end
 
 end
