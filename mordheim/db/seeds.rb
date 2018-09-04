@@ -17,15 +17,15 @@ p.save
 p2.warband_id = w2.id
 p2.save
 
-p3 = Place.create(namn: 'Testarea 3', beskrivning: 'Testest', warband: w2, lat: -150, lng: 134)
-p4 = Place.create(namn: 'Testarea 4', beskrivning: 'Testest', warband: w2, lat: -128, lng: 168)
-w2.visited_places << p3
-w2.visited_places << p4
+p3 = Place.create(namn: 'Testarea 3', beskrivning: 'Testest', lat: -150, lng: 134)
+p4 = Place.create(namn: 'Testarea 4', beskrivning: 'Testest', lat: -128, lng: 168)
 w2.visited_places << p2
 
 
 p.linked_places << [p4, p2]
 p2.linked_places << [p, p3]
+p3.linked_places << [p2, p4]
+p4.linked_places << [p, p3]
 w.visited_places << p
 p.save
 

@@ -12,7 +12,7 @@ class BattlesController < ApplicationController
 
         participants = battle.warbands
         defender = battle.place.controlling_warband
-        if @warband != winner && @warband == defender
+        if @warband != winner && @warband == defender && warband.place == battle.place
             loser_move_place = Place.find(params['loser_move_place_id'])
             json_response("Missing losers move", 400) if loser_move_place.nil?
             move_warband(@warband, loser_move_place)

@@ -21,7 +21,8 @@ class BattleModal extends Component {
                     <form>
                     <FormGroup controlId="formControlsSelect">
                         <ControlLabel>Vinnare:</ControlLabel>
-                        <FormControl componentClass="select" placeholder="Vem vann?" onChange={(e) => this._onChange(e)}>
+                        <FormControl componentClass="select" onChange={(e) => this._onChangeWinner(e)}>
+                            <option value="" selected disabled>Välj vinnare</option>
                             <option value={this.props.battle.warbands[0].id}>{this.props.battle.warbands[0].namn}</option>
                             <option value={this.props.battle.warbands[1].id}>{this.props.battle.warbands[1].namn}</option>
                         </FormControl>
@@ -29,7 +30,8 @@ class BattleModal extends Component {
                     {this.state.showLoserMove ? 
                     <FormGroup controlId="formControlsSelect">
                         <ControlLabel>{this.state.loser.namn} retirerar till:</ControlLabel>
-                        <FormControl componentClass="select">
+                        <FormControl componentClass="select" onChange={(e) => this._onChangeLoserMove(e)}>
+                            <option value="" selected disabled>Välj plats</option>
                             {this.props.nearbyPlaces.map(function(place, index){
                                 return <option value={place.id}>{place.namn}</option>
                             })}
@@ -46,15 +48,21 @@ class BattleModal extends Component {
         </div>;
     }
 
-    _onChange(e) {
+    _onChangeWinner(e) {
         let winner_id = e.target.value
         let loser = this.props.battle.warbands[0].id == winner_id ? this.props.battle.warbands[1]: this.props.battle.warbands[0]
-        let showLoserMove = this.props.battle.place.warband_id == loser.id
+        let showLoserMove = this.props.battle.place.warband_id == loser.id && loser.place_id == this.props.battle.place_id
         
         this.setState({
             showLoserMove: showLoserMove,
             loser: loser,
             winner_id: winner_id
+        })
+    }
+
+    _onChangeLoserMove(e) {
+        this.setState({
+            loser_move_place_id: e.target.value
         })
     }
 
@@ -74,7 +82,8 @@ class BattleModal extends Component {
                 headers: headers,
                 body: JSON.stringify({
                     winner_id: this.state.winner_id,
-                    battle_id: this.props.battle.id
+                    battle_id: this.props.battle.id,
+                    loser_move_place_id: this.state.loser_move_place_id
                 })
             }).then((rsp) => {
                 if (rsp.status == 200 || rsp.status == 204) {
