@@ -6,10 +6,31 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'json'
+
+pos_json = File.read('place_positions.json')
+desc_json = File.read('place_descriptions.json')
+pos_array = JSON.parse(pos_json)
+desc_array = JSON.parse(desc_json)
+
+set_up_places = {}
+
+starting_places = pos_array.slice(40, 47)
+starting_places.each_with_index do |place, idx|
+    set_up_places[place["id"].to_i] = Place.create(namn: 'Starting area ' + idx.to_s, 
+        beskrivning: 'This is a way into Mordheim', lat: place['lat'].to_i, lng: place['lng'].to_i)
+end
+
+other_places = pos_array.slice(0, 39)
+other_places.each_with_index do |place, idx|
+    set_up_places[place["id"].to_i] = Place.create(namn: place['name'], 
+        beskrivning: place['description'], lat: place['lat'].to_i, lng: place['lng'].to_i)
+end
+
 s = Spelare.create(namn: 'Gunnar', password: 'bananer', admin: true)
 s2 = Spelare.create(namn: 'Jens', password: 'bananer', admin: true)
-p = Place.create(namn: 'Testarea 1', beskrivning: 'Testest', lat: -177, lng: 156)
-p2 = Place.create(namn: 'Testarea 2', beskrivning: 'Testest', lat: -161, lng: 201)
+#p = Place.create(namn: 'Testarea 1', beskrivning: 'Testest', lat: -177, lng: 156)
+#p2 = Place.create(namn: 'Testarea 2', beskrivning: 'Testest', lat: -161, lng: 201)
 #w = s.create_warband!(namn: 'Hexenjaeger', typ: 'Witch Hunters', colour: '#800000', place_id: p.id)
 #w2 = s2.create_warband!(namn: 'Sigmarssystrarna', typ: 'Sisters of Sigmar', colour: '#dfbe9f', place_id: p2.id)
 #p.warband_id = w.id
