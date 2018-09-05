@@ -86,7 +86,7 @@ class Map extends React.Component {
     })
 
     // set markers on click events in the map
-    /*map.on('click', function (event) {
+    map.on('click', function (event) {
       let coords = event.latlng
       let marker = L.marker(coords)
       .addTo(layerBounds)
@@ -96,7 +96,7 @@ class Map extends React.Component {
       })
       marker.bindPopup('[' + Math.floor(coords.lat) + ',' + Math.floor(coords.lng) + ']')
       .openPopup()
-    })*/
+    })
     
     // add layer control object
     L.control.layers({}, {
