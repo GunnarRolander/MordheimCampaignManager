@@ -1,0 +1,201 @@
+[{
+    "name" : "Black Pit Settlement",
+    "cpv" : "1/2; 2 pts to for Undead, 1 for everyone else.",
+    "description" : "The most brutal of all encampments, is home of the most cruel of all human decadence shows; the gladiatorial pits. Not only this, but it is rumored that the Shadow Lord himself roams its streets and it is common to see Necromancers, mutants, Possessed and even Rat-Men in its streets. Evil Warbands willing to enter the encampment must follow the Settlement Rules: Town Cryer 29. Play as Sigmarheaven with the following changes: No tithe to pay, no militia assistance. All goods are available to find at normal chances and costs. Non-Evil warbands are attacked on sight by a random evil warband (same as militia, but of its respective characteristics.) Non-Evil warbands winning this battle can use optional rules, but items and services costs four times what they would normally cost. Scenarios 1-9 (RB), 'Ambush' (A02), “Encampment Raid” (TC28); Optional 'Peddler', Optional 'Pit Fighter' or 'Ogre Mercenary' (A02 - Random Happenings)"
+},
+{
+    "name" : "Brigandsburg",
+    "cpv" : "1/2; 2 pts to for Undead, 1 for everyone else.",
+    "description" : "Brigandsburg tends to house the more unsavory characters. Middenheimers abound here as do Witch Hunters. Some Reiklanders set up camp here and very few Marienburgers (after all it is too filthy for them).\n    The Sisters have a presence here but it is only a safe house. Possessed are a rare site but do appear at times.\n    Warbands willing to enter the encampment must follow the Settlement Rules: Town Cryer 29. Hired Swords\n    contracted out of Brigandsburg they are hired at 75% of the base cost but their upkeep is the same. Heroes\n    that go out searching for Rare items they must roll a d6 under their Initiative to keep careful watch of them\n    selves or risk ambush. If the test is failed they do not get to search for items as they have to avoid the roving\n    street thugs. Scenarios 1-9 (RB), 'Ambush' (A02), “Encampment Raid” (TC28); Optional 'Peddler', Optional 'Pit Fighter' or 'Ogre Mercenary' (A02 - Random Happenings)"
+},
+{
+    "name" : "Cemetery of St. Voller",
+    "cpv" : "1/2; 2 pts to for Undead, 1 for everyone else.",
+    "description" : "The Priests of Morr did their best to keep up with rising tide of the dead. The furthest areas of the Cemetery\n were the first to be filled. All of their toiling was for naught. This was the location where the Necromancer\n Marius Dire, began his grisly work and slowly began to bring the executed back to life. If he was able to finish\n his hideous work, no one knows. He has not been seen or heard from since the last horde of wandering\n zombies was sighted heading east.\n Scenarios 1-9 (RB), 'Kidnapped' (A02), 'Ambush' (A02); Optional 'Skeletons' or 'Itsy-Bitsy Spider' (A02 - Random Happenings)"
+},
+{
+    "name" : "City Hall & Constabulary",
+    "cpv" : "1",
+    "description" : "The former Mordheim Constabulary was based here. This was a different branch of the Military arm of the city.\n The Constabulary would do the dirty work that the Guards of the Barracks were exempt from. This would\n include keeping the Black-market in check whenever possible, and to prevent behind the scenes actions\n interrupting the Count’s rulings. In this building was housed many secrets of every inhabitant in Mordheim. The\n Town Guard was the muscle while officers of the Constabulary were the brains.\n Controlling warband can construct, based on hidden documentation, a Mordheim Map (+4 to roll.) Scenarios 1-\n 9 (RB), 'Ambush' (A02); Optional 'Peddler', Optional 'Pit Fighter' or 'Ogre Mercenary' (A02 - Random \n Happenings)"
+},
+{
+    "name" : "Clock Tower",
+    "cpv" : "1",
+    "description" : "The Clock Tower of Elector Count von Guyen was a gift from the city of Altdorf. The tower would ring the bells\n signaling the birth of Princes and Princess among other royal occasions. The tower is the tallest structure in\n the city itself and, for the most part, is still standing. This tower allows an unobstructed view of the entire city.\n Once the trademark of the market town, now desperate men (and worse) fight and die over its ruined\n landscape.\n The defender of this territory can choose to go first, place first, and infiltrate (as per Skaven skill pg93) up to 3\n models onto the board. If neither player is the defender then play as normal battle. Scenarios 1-9 (RB),\n 'Kidnapped' (A02), 'Ambush' (A02); Optional 'Peddler' (A02 - Random Happenings)"
+},
+{
+    "name" : "Common Neighborhood",
+    "cpv" : "0",
+    "description" : "This is a common residential area. Most of the inhabitants where ill prepared for Sigmar's Judgment, so they\n had to leave most of their few valuables behind. The ruins are in a decrepit state, and wandering in this area is\n very dangerous. Anyone visiting this area could rescue trapped family members, heirlooms and other\n valuables.\n Warband is affected by Looting (Advanced Rules) even if battles took place during the turn. Scenarios 1-9\n (RB), 'Kidnapped' (A02), 'Ambush' (A02); Optional 'Peddler' (A02 - Random Happenings)"
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+},
+{
+    "name" : "",
+    "cpv" : "",
+    "description" : ""
+}
+]
