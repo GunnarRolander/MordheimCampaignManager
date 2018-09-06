@@ -10,6 +10,7 @@ class Map extends React.Component {
   constructor(props) {
     super(props);
     this.map = null;
+    this.layerBounds = null;
     this.state = {
         map: null,
         showMapModal: false,
@@ -56,34 +57,12 @@ class Map extends React.Component {
     
     map.createPane('circleMarkers');
     map.getPane('circleMarkers').style.zIndex = -11;
-
+    
     let layerBounds = L.layerGroup(null, {pane: 'circleMarkers'})
     map.addLayer(layerBounds)
-    
-    let visiblePlaces = this.props.visiblePlaces
-    this.props.visibleLinks.map((link) => {
-      let place = visiblePlaces.find(p => p.id == link[0])
-      let linked_place = visiblePlaces.find(p => p.id == link[1])
+    this.layerBounds = layerBounds
 
-      let marker = L.polyline([[place.lat, place.lng],[linked_place.lat, linked_place.lng]], {color: '#101010', opacity: 0.6})
-      marker.addTo(layerBounds)
-      
-    })
-    
-    visiblePlaces.map((place) => {
-      let marker = L.circleMarker([place.lat, place.lng], {color: "#101010", fillColor: this._getColour(place.warband_id), opacity: 0.9, fillOpacity: 1, radius: this._getRadius(place)}
-      )
-      marker.addTo(layerBounds)
-    })
-
-    visiblePlaces.map((place) => {
-      let marker = L.marker([place.lat-2, place.lng], {color: '#000000', opacity: 0.6}
-      )
-      marker.on('click', (e) => {
-        this._showMapModal(place);
-      })
-      marker.addTo(layerBounds)
-    })
+    this._generateGraphics(layerBounds)
 
     // set markers on click events in the map
     /*map.on('click', function (event) {
@@ -97,18 +76,25 @@ class Map extends React.Component {
       marker.bindPopup('[' + Math.floor(coords.lat) + ',' + Math.floor(coords.lng) + ']')
       .openPopup()
     })*/
-    
     // add layer control object
+    
     L.control.layers({}, {
-      'Bounds': layerBounds,
-      'image' : imageOverlay
+        'Bounds': layerBounds,
+        'image' : imageOverlay
     }).addTo(map)
-
+        
     this.map = map;
   }
 
   componentDidUpdate() {
-    //debugger
+
+    this.map.removeLayer(this.layerBounds)
+
+    let layerBounds = L.layerGroup(null, {pane: 'circleMarkers'})
+    this.map.addLayer(layerBounds)
+    this.layerBounds = layerBounds
+
+    this._generateGraphics(layerBounds)
   }
 
   render() {
@@ -134,6 +120,33 @@ class Map extends React.Component {
       radius = 15
     }
     return radius
+  }
+
+  _generateGraphics(layerBounds) {    
+    let visiblePlaces = this.props.visiblePlaces
+    this.props.visibleLinks.map((link) => {
+      let place = visiblePlaces.find(p => p.id == link[0])
+      let linked_place = visiblePlaces.find(p => p.id == link[1])
+
+      let marker = L.polyline([[place.lat, place.lng],[linked_place.lat, linked_place.lng]], {color: '#101010', opacity: 0.6})
+      marker.addTo(layerBounds)
+      
+    })
+    
+    visiblePlaces.map((place) => {
+      let marker = L.circleMarker([place.lat, place.lng], {color: "#101010", fillColor: this._getColour(place.warband_id), opacity: 0.9, fillOpacity: 1, radius: this._getRadius(place)}
+      )
+      marker.addTo(layerBounds)
+    })
+
+    visiblePlaces.map((place) => {
+      let marker = L.marker([place.lat-2, place.lng], {color: '#000000', opacity: 0.6}
+      )
+      marker.on('click', (e) => {
+        this._showMapModal(place);
+      })
+      marker.addTo(layerBounds)
+    })
   }
 
   _addCircleMarker(latlng){

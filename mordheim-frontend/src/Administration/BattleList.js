@@ -11,9 +11,9 @@ class BattleList extends Component {
     }
 
     render() {
-        console.log(this.state.battles)
-        let coming_battles = this.state.battles.filter(battle => battle.winner_id == null)
-        let finished_battles = this.state.battles.filter(battle => battle.winner_id != null)
+        console.log(this.props.battles)
+        let coming_battles = this.props.battles.filter(battle => battle.winner_id == null)
+        let finished_battles = this.props.battles.filter(battle => battle.winner_id != null)
         return(
         <div>
             <Panel defaultExpanded={this.props.turn.fas == "Strid"}>
@@ -50,7 +50,7 @@ class BattleList extends Component {
     }
 
     _onNewResult(battle_id, winner_id){
-        /*let battles = this.state.battles
+        /*let battles = this.props.battles
         battles.find(b => b.id == battle_id).winner_id = parseInt(winner_id, 10) 
 
         this.setState({

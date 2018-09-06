@@ -21,23 +21,13 @@ class AdministrationPanel extends Component {
             return <div></div>
         }
         return(
-            <Grid>
-                <Row>
-                    <Col xs={6} md={4}>
-                        <TurnCounter turn={this.state.turn} isAdmin={true} getTurn={() => this._getTurn()} refresh={() => this.props.refresh()}></TurnCounter>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col xs={6} md={4}>
-                        <Order turn={this.state.turn} warband={this.props.warband}></Order>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col xs={6} md={4}>
-                        <BattleList turn={this.state.turn} battles={this.props.warband.battles} refresh={() => this.props.refresh()}></BattleList>
-                    </Col>
-                </Row>
-            </Grid>
+            <div>
+                <TurnCounter turn={this.state.turn} isAdmin={true} getTurn={() => this._getTurn()} refresh={() => this.props.refresh()}></TurnCounter>
+
+                <Order turn={this.state.turn} warband={this.props.warband}></Order>
+
+                <BattleList turn={this.state.turn} battles={this.props.warband.battles} refresh={() => this.props.refresh()}></BattleList>
+            </div>
         )
     }
 

@@ -30,10 +30,10 @@ class App extends Component {
         {showMapAndAdmin ? 
           <Grid>
             <Row className="show-grid">
-              <Col xs={6} md={9}>
+              <Col className="customCol" xs={9} sm={9} md={9}>
                 <Map visiblePlaces={this.state.warband.visible_places} visibleLinks={this.state.warband.visible_links} visibleWarbands={this.state.warband.visible_warbands}></Map>
               </Col>
-              <Col xs={6} md={3}>
+              <Col className="customCol" xs={3} sm={3} md={3}>
                 <AdministrationPanel warband={this.state.warband} refresh={() => this._authenticate(this.state.username, this.state.password)}></AdministrationPanel>
               </Col>
             </Row>
