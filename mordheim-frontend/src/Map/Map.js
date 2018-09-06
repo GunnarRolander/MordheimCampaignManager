@@ -71,7 +71,7 @@ class Map extends React.Component {
     })
     
     visiblePlaces.map((place) => {
-      let marker = L.circleMarker([place.lat, place.lng], {color: "#101010", fillColor: this._getColour(place.warband_id), opacity: 0.9, fillOpacity: 1}
+      let marker = L.circleMarker([place.lat, place.lng], {color: "#101010", fillColor: this._getColour(place.warband_id), opacity: 0.9, fillOpacity: 1, radius: this._getRadius(place)}
       )
       marker.addTo(layerBounds)
     })
@@ -86,7 +86,7 @@ class Map extends React.Component {
     })
 
     // set markers on click events in the map
-    map.on('click', function (event) {
+    /*map.on('click', function (event) {
       let coords = event.latlng
       let marker = L.marker(coords)
       .addTo(layerBounds)
@@ -96,7 +96,7 @@ class Map extends React.Component {
       })
       marker.bindPopup('[' + Math.floor(coords.lat) + ',' + Math.floor(coords.lng) + ']')
       .openPopup()
-    })
+    })*/
     
     // add layer control object
     L.control.layers({}, {
@@ -105,31 +105,31 @@ class Map extends React.Component {
     }).addTo(map)
 
     this.map = map;
-    // assign map and image dimensions
-    //let rc = new L.RasterCoords(map, img)
-    // set max zoom Level (might be `x` if gdal2tiles was called with `-z 0-x` option)
-    //map.setMaxZoom(rc.zoomLevel())
-    // set the view in the middle of the image
-    //map.setView(rc.unproject([img[0] / 2, img[1] / 2]), 2)
-  
-    // set marker at the image bound edges
-  
-    // the tile layer containing the image generated with gdal2tiles --leaflet ...
   }
 
   render() {
     return <div>
       <div style={{height: "600px"}} id="image-map"></div>
-      <PlaceInfoModal show={this.state.showMapModal} hide={() => this._hideMapModal()} place={this.state.mapInfoPlace}></PlaceInfoModal>
+      <PlaceInfoModal show={this.state.showMapModal} hide={() => this._hideMapModal()} visibleWarbands={this.props.visibleWarbands} place={this.state.mapInfoPlace}></PlaceInfoModal>
     </div>
   }
 
   _getColour(warband_id) {
-    let colour = this.props.colours[warband_id]
-    if (colour == null) {
-      colour = "#808080"
+    let colour = "#808080"
+    let warband = this.props.visibleWarbands.find(w => w.id == warband_id)
+    if (warband != null && warband.colour != null) {
+      colour = warband.colour
     }
     return colour
+  }
+
+  _getRadius(place){
+    let radius = 10
+    let warband = this.props.visibleWarbands.find(w => w.id == place.warband_id)
+    if (warband != null && warband.place_id == place.id) {
+      radius = 15
+    }
+    return radius
   }
 
   _addCircleMarker(latlng){

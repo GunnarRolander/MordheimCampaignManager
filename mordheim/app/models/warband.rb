@@ -20,13 +20,13 @@ class Warband < ApplicationRecord
     return Link.where(place_id: ids, linked_place_id: ids).all.pluck(:place_id, :linked_place_id)
   end
 
-  def visible_warband_colours
-    colour_hash = {}
+  def visible_warbands
+    warbands = []
     visible_places.each do |place|
       next if place.warband.nil?
-      colour_hash[place.warband_id] = place.warband.colour
+      warbands << place.warband.attributes.slice('id', 'colour', 'namn', 'place_id')
     end
-    return colour_hash
+    return warbands
   end
 
   def current_action

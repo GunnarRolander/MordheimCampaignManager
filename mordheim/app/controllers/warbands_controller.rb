@@ -10,7 +10,7 @@ class WarbandsController < ApplicationController
     end
 
     def create_warband
-        starting_place = [Place.find(1), Place.find(2)].select {|p| p.warband.nil? }.sample
+        starting_place = Place.first(8).select {|p| p.warband.nil? }.sample
         w = @spelare.create_warband!(namn: params['warband_name'], typ: params['warband_type'], 
             colour: params['colour'], place: starting_place)
         w.visited_places << starting_place
@@ -33,7 +33,7 @@ class WarbandsController < ApplicationController
                     :methods => :possible_retreats
                 }
             }, 
-            :methods => [:visible_places, :visible_links, :current_action, :visible_warband_colours])
+            :methods => [:visible_places, :visible_links, :current_action, :visible_warbands])
         )
     end
 

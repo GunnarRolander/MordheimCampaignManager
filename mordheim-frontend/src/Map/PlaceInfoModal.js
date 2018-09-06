@@ -13,14 +13,16 @@ class PlaceInfoModal extends Component {
         if (this.props.place == null) {
             return <div></div>
         }
+        let controllingWarband = this.props.visibleWarbands.find(w => w.id == this.props.place.warband_id)
         return <div className="static-modal">
             <Modal show={this.props.show} onHide={()=> this._hide()}>
                 <Modal.Header>
-                    <Modal.Title>{this.props.place.namn} ({this.props.place.nummer})</Modal.Title>
+                    <Modal.Title>{this.props.place.namn}</Modal.Title>
                 </Modal.Header>
 
                 <Modal.Body>
                     {this.props.place.beskrivning}
+                    {controllingWarband ? <b><br/>Kontrolleras av {controllingWarband.namn}</b> : null}
                 </Modal.Body>
 
                 <Modal.Footer>
