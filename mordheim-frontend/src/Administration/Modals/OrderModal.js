@@ -24,9 +24,9 @@ class OrderModal extends Component {
                         <FormControl componentClass="select" placeholder="Flytta till" value={this.state.moveToId} onChange={(e) => this._onChange(e)}>
                             <option value="" selected disabled>Välj plats</option>
                             {this.props.nearbyPlaces.map(function(place, index){
-                                return <option key={"orderOption"+index} value={place.id}>Flytta till {place.namn} ({place.nummer})</option>
+                                return <option key={"orderOption"+index} value={place.id}>Flytta till {place.namn}</option>
                             })}
-                            <option key={"orderOptionNuvarande"} value={this.props.currentPlace.id}>Flyttar ej, stannar på {this.props.currentPlace.namn} ({this.props.currentPlace.nummer})</option>
+                            <option key={"orderOptionNuvarande"} value={this.props.currentPlace.id}>Flyttar ej, stannar på {this.props.currentPlace.namn}</option>
                         </FormControl>
                     </FormGroup>
                     </form>

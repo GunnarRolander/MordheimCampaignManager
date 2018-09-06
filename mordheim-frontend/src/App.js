@@ -34,7 +34,7 @@ class App extends Component {
                 <Map visiblePlaces={this.state.warband.visible_places} visibleLinks={this.state.warband.visible_links} visibleWarbands={this.state.warband.visible_warbands}></Map>
               </Col>
               <Col xs={6} md={3}>
-                <AdministrationPanel warband={this.state.warband}></AdministrationPanel>
+                <AdministrationPanel warband={this.state.warband} refresh={() => this._authenticate(this.state.username, this.state.password)}></AdministrationPanel>
               </Col>
             </Row>
           </Grid> 

@@ -107,6 +107,10 @@ class Map extends React.Component {
     this.map = map;
   }
 
+  componentDidUpdate() {
+    //debugger
+  }
+
   render() {
     return <div>
       <div style={{height: "600px"}} id="image-map"></div>

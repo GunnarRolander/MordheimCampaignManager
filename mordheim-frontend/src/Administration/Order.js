@@ -22,8 +22,9 @@ class Order extends Component {
                 let place = this.props.warband.visible_places.find(p => p.id == this.state.action.place_id)
             }
         }
+        let ordergivning = this.props.turn.fas == "Ordergivning"
         return(
-            <Panel defaultExpanded={this.props.turn.fas == "Ordergivning"}>
+            <Panel defaultExpanded={ordergivning}>
                 <Panel.Heading>
                     <Panel.Title toggle>
                         Order
@@ -34,7 +35,7 @@ class Order extends Component {
                         Order för runda {this.props.turn.nummer}:<br/>
                         {this.state.orderText == null ? "Inget - ge en order!" : this.state.orderText}<br/>
                         <hr/>
-                        <Button onClick={() => this._openOrderModal()}>{this.state.orderText == null ? "Ge order" : "Ändra order"}</Button>
+                        <Button disabled={!ordergivning} onClick={() => this._openOrderModal()}>{this.state.orderText == null ? "Ge order" : "Ändra order"}</Button>
                     </Panel.Body>
                 </Panel.Collapse>
                 <OrderModal nearbyPlaces={this.props.warband.place.linked_places} currentPlace={this.props.warband.place} existingAction={this.state.action} updateAction={(l, id) => this._updateAction(l, id)} show={this.state.showModal} hide={() => this._hideOrderModal()}/>
@@ -60,9 +61,9 @@ class Order extends Component {
         }
         let place = this.props.warband.visible_places.find(x => x.id == action.place_id)
         if (action.typ == "Remain") {
-            return "Flyttar ej, stannar på " + place.namn + " (" + place.id + ")"
+            return "Flyttar ej, stannar på " + place.namn 
         } else {
-            return "Flytta till "+ place.namn + " (" + place.id + ")"
+            return "Flytta till " + place.namn
         }
     }
 

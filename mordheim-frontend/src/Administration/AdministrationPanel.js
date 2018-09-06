@@ -24,7 +24,7 @@ class AdministrationPanel extends Component {
             <Grid>
                 <Row>
                     <Col xs={6} md={4}>
-                        <TurnCounter turn={this.state.turn} isAdmin={true} getTurn={() => this._getTurn()}></TurnCounter>
+                        <TurnCounter turn={this.state.turn} isAdmin={true} getTurn={() => this._getTurn()} refresh={() => this.props.refresh()}></TurnCounter>
                     </Col>
                 </Row>
                 <Row>
@@ -34,7 +34,7 @@ class AdministrationPanel extends Component {
                 </Row>
                 <Row>
                     <Col xs={6} md={4}>
-                        <BattleList turn={this.state.turn} battles={this.props.warband.battles}></BattleList>
+                        <BattleList turn={this.state.turn} battles={this.props.warband.battles} refresh={() => this.props.refresh()}></BattleList>
                     </Col>
                 </Row>
             </Grid>

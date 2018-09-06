@@ -50,12 +50,13 @@ class BattleList extends Component {
     }
 
     _onNewResult(battle_id, winner_id){
-        let battles = this.state.battles
+        /*let battles = this.state.battles
         battles.find(b => b.id == battle_id).winner_id = parseInt(winner_id, 10) 
 
         this.setState({
             battles: battles
-        })
+        })*/
+        this.props.refresh()
     }
 }
 
