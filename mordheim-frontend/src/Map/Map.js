@@ -79,10 +79,10 @@ class Map extends React.Component {
     // add layer control object
     
     L.control.layers({}, {
-        'Bounds': layerBounds,
+        //'Bounds': layerBounds,
         'image' : imageOverlay
     }).addTo(map)
-        
+      
     this.map = map;
   }
 
