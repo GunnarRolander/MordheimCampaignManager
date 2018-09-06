@@ -67,7 +67,7 @@ class BattleModal extends Component {
     }
 
     _saveResult(){
-        if(global.username && global.password) {
+        if(localStorage.getItem('username') && localStorage.getItem('password')) {
             let authUrl = 'http://localhost:3000/battles/register_result'
       
             let headers = new Headers({
@@ -76,7 +76,7 @@ class BattleModal extends Component {
             })
       
             //headers.append('Content-Type', 'text/json');
-            headers.append('Authorization', 'Basic ' + new Buffer(global.username + ":" + global.password).toString('base64'));
+            headers.append('Authorization', 'Basic ' + new Buffer(localStorage.getItem('username') + ":" + localStorage.getItem('password')).toString('base64'));
       
             fetch(authUrl, {method:'POST',
                 headers: headers,

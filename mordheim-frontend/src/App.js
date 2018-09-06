@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import {Grid, Row, Col, Button} from 'react-bootstrap';
+import {Grid, Row, Col, Button, Glyphicon} from 'react-bootstrap';
 import AdministrationPanel from './Administration/AdministrationPanel.js'
 import Map from './Map/Map.js'
-import logo from './logo.svg';
 import './App.css';
 import LoginModal from './LoginModal.js'
 import CreateWarbandModal from './CreateWarbandModal.js';
@@ -19,12 +18,17 @@ class App extends Component {
       }
   }
 
+  componentDidMount(){
+    this._authenticate(localStorage.getItem('username'), localStorage.getItem('password'))
+  }
+
   render() {
     let showMapAndAdmin = this.state.authenticated && this.state.warband.id != null
     let showCreateWarbandModal = this.state.authenticated && this.state.warband.id == null
     return (
       <div className="App">
         <header className="App-header">
+          {this.state.authenticated ? <Button onClick={() => this._logOut()} className="pull-right"><Glyphicon glyph="lock" /></Button> : null}
           <h1 className="App-title">Kulagheim!</h1>
         </header>
         {showMapAndAdmin ? 
@@ -65,8 +69,8 @@ class App extends Component {
       }).then((rsp) => {
         if (rsp.status == 200) {
           rsp.json().then((data) =>{
-            global.username = username
-            global.password = password
+            localStorage.setItem('username', username)
+            localStorage.setItem('password', password)
             this.setState({
               username: username,
               password: password,
@@ -80,6 +84,18 @@ class App extends Component {
         }
       })
     }
+  }
+
+  _logOut(){
+    localStorage.setItem('username', null)
+    localStorage.setItem('password', null)
+    this.setState({
+      showLoginModal: true,
+      username: null,
+      password: null,
+      authenticated: false,
+      warband: null
+      })
   }
 }
 

@@ -69,7 +69,7 @@ class Order extends Component {
 
     _updateAction(label, place_id) {
 
-        if(global.username && global.password) {
+        if(localStorage.getItem('username') && localStorage.getItem('password')) {
             let authUrl = 'http://localhost:3000/actions/register_action'
       
             let headers = new Headers({
@@ -78,7 +78,7 @@ class Order extends Component {
             })
       
             //headers.append('Content-Type', 'text/json');
-            headers.append('Authorization', 'Basic ' + new Buffer(global.username + ":" + global.password).toString('base64'));
+            headers.append('Authorization', 'Basic ' + new Buffer(localStorage.getItem('username') + ":" + localStorage.getItem('password')).toString('base64'));
       
             fetch(authUrl, {method:'POST',
                 headers: headers,

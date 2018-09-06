@@ -26,7 +26,7 @@ class TurnCounter extends Component {
     }
 
     _nextClick() {
-        if(global.username && global.password) {
+        if(localStorage.getItem('username') && localStorage.getItem('password')) {
             let authUrl = 'http://localhost:3000/turn/next_turn'
             if(this.props.turn.fas == "Ordergivning") {
                 authUrl = 'http://localhost:3000/turn/next_phase'
@@ -38,7 +38,7 @@ class TurnCounter extends Component {
             })
       
             //headers.append('Content-Type', 'text/json');
-            headers.append('Authorization', 'Basic ' + new Buffer(global.username + ":" + global.password).toString('base64'));
+            headers.append('Authorization', 'Basic ' + new Buffer(localStorage.getItem('username') + ":" + localStorage.getItem('password')).toString('base64'));
       
             fetch(authUrl, {method:'POST',
                 headers: headers
