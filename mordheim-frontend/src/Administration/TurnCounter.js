@@ -44,8 +44,14 @@ class TurnCounter extends Component {
                 headers: headers
             }).then((rsp) => {
                 if (rsp.status == 200 || rsp.status == 204) {
-                    this.props.refresh()
-                    this.props.getTurn()                    
+                    rsp.json().then((data) =>{
+                        if(data[0] && data[0] != 'N') {
+                            alert("Orapporterade strider!")
+                        } else {
+                            this.props.refresh()
+                            this.props.getTurn()                    
+                        }
+                    })
                 } else {
                     throw new Error("Failed authentication")
                 }

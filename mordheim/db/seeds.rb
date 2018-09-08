@@ -8,8 +8,8 @@
 
 require 'json'
 
-pos_json = File.read('/home/seguro/my_repos/mordheimCampaignManager/mordheim/db/place_positions.json')
-desc_json = File.read('/home/seguro/my_repos/mordheimCampaignManager/mordheim/db/place_descriptions.json')
+pos_json = File.read('/home/gunnar/my_repos/MordheimCampaignManager/mordheim/db/place_positions.json')
+desc_json = File.read('/home/gunnar/my_repos/MordheimCampaignManager/mordheim/db/place_descriptions.json')
 pos_array = JSON.parse(pos_json)
 desc_array = JSON.parse(desc_json)
 set_up_places = {}
