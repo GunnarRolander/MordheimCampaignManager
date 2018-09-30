@@ -7,6 +7,7 @@ class TurnsController < ApplicationController
     end
 
     def next_turn
+        json_response('Du är inte admin, lägg av!', 400) unless @spelare.admin
         if @current_turn.fas == 'Strid'
             battles_left = Battle.where(turn: @current_turn).all.select{|b| b.winner.nil?}
             if (battles_left.any?)
@@ -24,6 +25,7 @@ class TurnsController < ApplicationController
     end
 
     def next_phase
+        json_response('Du är inte admin, lägg av!', 400) unless @spelare.admin
         @current_turn.fas = "Strid"
         @current_turn.save
         calculate_coming_battles

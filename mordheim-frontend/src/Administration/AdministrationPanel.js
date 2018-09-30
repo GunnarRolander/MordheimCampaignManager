@@ -20,9 +20,10 @@ class AdministrationPanel extends Component {
         if (this.state.turn == null) {
             return <div></div>
         }
+        // TODO: Fixa isAdmin!
         return(
             <div>
-                <TurnCounter turn={this.state.turn} isAdmin={true} getTurn={() => this._getTurn()} refresh={() => this.props.refresh()}></TurnCounter>
+                <TurnCounter turn={this.state.turn} isAdmin={this.props.warband.spelare.admin} getTurn={() => this._getTurn()} refresh={() => this.props.refresh()}></TurnCounter>
 
                 <Order turn={this.state.turn} warband={this.props.warband}></Order>
 

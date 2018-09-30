@@ -60,6 +60,9 @@ class Order extends Component {
             return null
         }
         let place = this.props.warband.visible_places.find(x => x.id == action.place_id)
+        if (place == null) {
+            place.namn = "Bugg-namn"
+        }
         if (action.typ == "Remain") {
             return "Flyttar ej, stannar på " + place.namn 
         } else {

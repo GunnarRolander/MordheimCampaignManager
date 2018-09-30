@@ -31,7 +31,10 @@ class WarbandsController < ApplicationController
                         :warbands => {}, :place => {}
                     }, 
                     :methods => :possible_retreats
+                }, :spelare => {
+                    :include => {}
                 }
+
             }, 
             :methods => [:visible_places, :visible_links, :current_action, :visible_warbands])
         )

@@ -40,7 +40,7 @@ set_up_places.each_pair do |id, place|
 end
 
 s = Spelare.create(namn: 'Gunnar', password: 'bananer', admin: true)
-s2 = Spelare.create(namn: 'Jens', password: 'bananer', admin: true)
+s2 = Spelare.create(namn: 'Jens', password: 'bananer', admin: false)
 t = Turn.create(nummer: 1, fas: "Ordergivning")
 
 #p = Place.create(namn: 'Testarea 1', beskrivning: 'Testest', lat: -177, lng: 156)
