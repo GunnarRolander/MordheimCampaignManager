@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, FormGroup, FormControl, ControlLabel, Modal } from "react-bootstrap";
+import { Button, FormGroup, FormControl, ControlLabel, Modal, Alert } from "react-bootstrap";
 import "./Login.css";
 
 export default class LoginModal extends Component {
@@ -63,6 +63,13 @@ export default class LoginModal extends Component {
                   Login
                 </Button>
               </form>
+              <br/>
+              {this.props.showFailedLogon ?
+                <Alert bsStyle="danger">
+                  <strong>Fel användarnamn/lösenord.</strong><br/>
+                  Mata in rätt användarnamn/lösenord och försök igen.
+                </Alert>
+              : null }
             </div>
           </Modal.Body>
         </Modal>
