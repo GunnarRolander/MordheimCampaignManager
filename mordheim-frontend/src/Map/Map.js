@@ -11,6 +11,7 @@ class Map extends React.Component {
     super(props);
     this.map = null;
     this.layerBounds = null;
+    this.placeDescriptions = null;
     this.state = {
         map: null,
         showMapModal: false,
@@ -84,6 +85,17 @@ class Map extends React.Component {
     }).addTo(map)
       
     this.map = map;
+
+    fetch("place_descriptions.json").then((rsp) => {
+      if(rsp.status != 200) 
+        throw new Error("CPV could not be loaded")
+      rsp.json().then((placeDescriptions) => {
+        this.placeDescriptions = placeDescriptions
+
+      })
+    }).catch((error) => {
+      console.error("Error:", error)
+    })
   }
 
   componentDidUpdate() {
@@ -100,7 +112,7 @@ class Map extends React.Component {
   render() {
     return <div>
       <div style={{height: "600px"}} id="image-map"></div>
-      <PlaceInfoModal show={this.state.showMapModal} hide={() => this._hideMapModal()} visibleWarbands={this.props.visibleWarbands} place={this.state.mapInfoPlace}></PlaceInfoModal>
+      <PlaceInfoModal show={this.state.showMapModal} hide={() => this._hideMapModal()} visibleWarbands={this.props.visibleWarbands} place={this.state.mapInfoPlace} cpv={this.state.cpv}></PlaceInfoModal>
     </div>
   }
 
@@ -154,9 +166,17 @@ class Map extends React.Component {
   }
 
   _showMapModal(place) {
+    let placeDesc = this.placeDescriptions.find(p => p.name == place.namn)
+    let cpv = 0
+
+    if (placeDesc) {
+      cpv = placeDesc.cpv
+    }
+
     this.setState({
       showMapModal: true,
-      mapInfoPlace: place
+      mapInfoPlace: place,
+      cpv: cpv
     })
   }
 

@@ -21,6 +21,7 @@ class PlaceInfoModal extends Component {
                 </Modal.Header>
 
                 <Modal.Body>
+                    <strong>CPV: {this.props.cpv}</strong><br/>
                     {this.props.place.beskrivning}
                     {controllingWarband ? <b><br/>Kontrolleras av {controllingWarband.namn}</b> : null}
                 </Modal.Body>
