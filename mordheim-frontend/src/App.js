@@ -10,16 +10,28 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showLoginModal: true,
+      showLoginModal: false,
       username: null,
       password: null,
       authenticated: false,
-      warband: null
+      warband: null,
+      showFailedLogon: false
       }
   }
 
   componentDidMount(){
-    this._authenticate(localStorage.getItem('username'), localStorage.getItem('password'))
+    let username = localStorage.getItem('username')
+    let password = localStorage.getItem('password')
+
+    if (username && password ) {
+      this._authenticate(username, password)
+    } else {
+      this.setState(
+        {
+          showLoginModal: true
+        }
+      )
+    }
   }
 
   render() {
@@ -43,7 +55,7 @@ class App extends Component {
             </Row>
           </Grid> 
         : null}
-        <LoginModal show={this.state.showLoginModal} hide={()=> this._hideModal()} authenticate={(username, password) => this._authenticate(username, password)}></LoginModal>
+        <LoginModal show={this.state.showLoginModal} hide={()=> this._hideModal()} authenticate={(username, password) => this._authenticate(username, password)} showFailedLogon={this.state.showFailedLogon}></LoginModal>
         <CreateWarbandModal show={showCreateWarbandModal} hide={()=> this._hideModal()} getWarband={() => this._authenticate(this.state.username, this.state.password)}/>
       </div>
     );
@@ -79,6 +91,9 @@ class App extends Component {
               showLoginModal: false
             })
           })
+          
+        } else if (rsp.status == 401) {
+          this.setState({showFailedLogon: true})
         } else {
           throw new Error("Failed logon")
         }
