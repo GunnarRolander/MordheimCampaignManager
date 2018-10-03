@@ -1,6 +1,7 @@
 class TurnsController < ApplicationController
     include Response, Move
     before_action :set_current_turn
+    before_action :authenticate, except: :get_turn
 
     def get_turn
         json_response(@current_turn)
