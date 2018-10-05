@@ -59,32 +59,24 @@ class Map extends React.Component {
     map.createPane('circleMarkers');
     map.getPane('circleMarkers').style.zIndex = -11;
     
-    let layerBounds = L.layerGroup(null, {pane: 'circleMarkers'})
+    let layerBounds = new L.FeatureGroup(null, {pane: 'circleMarkers'})
     map.addLayer(layerBounds)
     this.layerBounds = layerBounds
-
-    this._generateGraphics(layerBounds)
-
-    // set markers on click events in the map
-    /*map.on('click', function (event) {
-      let coords = event.latlng
-      let marker = L.marker(coords)
-      .addTo(layerBounds)
-      marker.on('mouseover', (e) => {
-        alert("KLICK!");
-        //this._showMapModal(visiblePlaces[0]);
-      })
-      marker.bindPopup('[' + Math.floor(coords.lat) + ',' + Math.floor(coords.lng) + ']')
-      .openPopup()
-    })*/
-    // add layer control object
-    
-    L.control.layers({}, {
-        //'Bounds': layerBounds,
-        'image' : imageOverlay
-    }).addTo(map)
-      
     this.map = map;
+
+    
+    map.on('click', function (event) {
+      console.log(map.getBounds())
+      console.log(event.latlng)
+    })
+    
+    // add layer control object    
+    L.control.layers({}, {
+      //'Bounds': layerBounds,
+      'image' : imageOverlay
+    }).addTo(map)
+    
+    this._generateGraphics(layerBounds)
 
     fetch("place_descriptions.json").then((rsp) => {
       if(rsp.status != 200) 
@@ -102,11 +94,12 @@ class Map extends React.Component {
 
     this.map.removeLayer(this.layerBounds)
 
-    let layerBounds = L.layerGroup(null, {pane: 'circleMarkers'})
+    let layerBounds = new L.FeatureGroup(null, {pane: 'circleMarkers'})
     this.map.addLayer(layerBounds)
     this.layerBounds = layerBounds
 
     this._generateGraphics(layerBounds)
+    
   }
 
   render() {
@@ -148,6 +141,7 @@ class Map extends React.Component {
     visiblePlaces.map((place) => {
       let marker = L.circleMarker([place.lat, place.lng], {color: "#101010", fillColor: this._getColour(place.warband_id), opacity: 0.9, fillOpacity: 1, radius: this._getRadius(place)}
       )
+      console.log([place.lat, place.lng])
       marker.addTo(layerBounds)
     })
 
@@ -159,6 +153,9 @@ class Map extends React.Component {
       })
       marker.addTo(layerBounds)
     })
+    this.map.fitBounds(layerBounds.getBounds().pad(0.1))
+    console.log(layerBounds.getBounds())
+    console.log(this.map.getBounds())
   }
 
   _addCircleMarker(latlng){

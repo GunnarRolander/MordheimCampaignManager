@@ -1,5 +1,6 @@
 class TurnsController < ApplicationController
     include Response, Move
+    before_action :authenticate, except: :get_turn
     before_action :set_current_turn
 
     def get_turn
@@ -11,7 +12,14 @@ class TurnsController < ApplicationController
         if @current_turn.fas == 'Strid'
             battles_left = Battle.where(turn: @current_turn).all.select{|b| b.winner.nil?}
             if (battles_left.any?)
-                json_response(battles_left)
+                json_response(battles_left.to_json(
+                    :include => {
+                        :warbands => {
+                            :except => [:place_id]
+                        }
+                    },
+                    :except => [:place_id]
+                ))
             else
                 new_turn = Turn.new()
                 new_turn.nummer = @current_turn.nummer + 1
