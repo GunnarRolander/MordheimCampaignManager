@@ -25,5 +25,7 @@ Rails.application.routes.draw do
   get 'turn', to: 'turns#get_turn'
   post 'turn/next_turn', to: 'turns#next_turn'
   post 'turn/next_phase', to: 'turns#next_phase'
+  get 'turn/get_battles', to: 'turns#get_battles'
+  get 'turn/get_actions', to: 'turns#get_actions'
 
 end
