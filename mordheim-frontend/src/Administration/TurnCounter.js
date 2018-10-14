@@ -26,7 +26,7 @@ class TurnCounter extends Component {
                 </Panel>
                 <TurnInfoModal turn={this.props.turn} isAdmin={this.props.isAdmin} 
                     show={this.state.showTurnInfoModal} hide={() => this._hideTurnInfoModal()}
-                    refresh={() => this.props.refresh()} />
+                    refresh={() => this.props.refresh()} getTurn={() => this.props.getTurn()}/>
             </div>
         );
     }
