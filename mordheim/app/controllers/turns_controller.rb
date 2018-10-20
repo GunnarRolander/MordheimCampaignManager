@@ -93,8 +93,9 @@ class TurnsController < ApplicationController
                 # If the controlling warband is nearby, create a battle.    
                 elsif destination.linked_places.exists?(destination.warband.place.id) || destination.warband.place == destination
                     puts "Controlling warband nearby"
-                    b = Battle.new(place: action.place, turn: @current_turn)
-                    b.warbands = [destination.warband, action.warband]
+                    b = Battle.find_or_create_by(place: action.place, turn: @current_turn)
+                    b.warbands << destination.warband if b.warbands.empty?
+                    b.warbands << action.warband
                     b.save
                 else
                     puts "Uncontested"
