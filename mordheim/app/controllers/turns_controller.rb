@@ -78,6 +78,10 @@ class TurnsController < ApplicationController
                     puts "Uncontested"
                     unopposed_moves << [action.warband, destination]
                 end
+            else
+                # If the destination is controlled by the moving warband, it's unopposed.
+                puts "Uncontested"
+                unopposed_moves << [action.warband, destination]
             end
         end
 
