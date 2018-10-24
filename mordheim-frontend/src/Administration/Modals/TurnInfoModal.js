@@ -119,7 +119,10 @@ class TurnInfoModal extends Component {
             })
         } else {
             list = json_data.map((battle, index) => {
-                return battle.warbands[0].namn + ' - ' + battle.warbands[1].namn
+                let warband_names = battle.warbands.map((warband, index) => {
+                    return warband.namn
+                })
+                return warband_names.join(' - ')
             })
         }
 
