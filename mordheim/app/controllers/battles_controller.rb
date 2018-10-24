@@ -19,7 +19,8 @@ class BattlesController < ApplicationController
         end
         battle.winner = winner
         battle.save
-        move_warband(winner, battle.place)
+
+        move_warband(winner, battle.place) if winner != defender
     end
 
     private

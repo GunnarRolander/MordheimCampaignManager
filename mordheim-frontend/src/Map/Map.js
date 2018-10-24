@@ -5,6 +5,7 @@ import 'leaflet-css'
 import {Grid, Row, Col, Button, Panel} from 'react-bootstrap';
 import img from '../MordheimMap.png'
 import PlaceInfoModal from './PlaceInfoModal.js'
+import battleIcon from '../battle_icon.svg'
 
 class Map extends React.Component {
   constructor(props) {
@@ -145,14 +146,29 @@ class Map extends React.Component {
       marker.addTo(layerBounds)
     })
 
+    
+    let coming_battles = this.props.battles.filter(battle => battle.winner_id == null)
+    
     visiblePlaces.map((place) => {
-      let marker = L.marker([place.lat-2, place.lng], {color: '#000000', opacity: 0.6}
-      )
+      let marker = L.marker([place.lat, place.lng], {color: '#000000', opacity: 0.6})
+      
+      let battle = coming_battles.filter(battle => battle.place_id == place.id)
+      
+      if (battle.length > 0) {
+        let iconSize = this._getRadius(place)*1.4
+        let icon = L.icon( {
+            iconUrl: '/battle_icon_2.svg',
+            iconSize: [iconSize, iconSize],
+        } );
+        marker.setIcon(icon)
+      }
+
       marker.on('click', (e) => {
         this._showMapModal(place);
       })
       marker.addTo(layerBounds)
     })
+
     this.map.fitBounds(layerBounds.getBounds().pad(0.1))
     console.log(layerBounds.getBounds())
     console.log(this.map.getBounds())

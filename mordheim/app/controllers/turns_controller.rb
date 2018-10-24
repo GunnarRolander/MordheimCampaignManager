@@ -41,6 +41,28 @@ class TurnsController < ApplicationController
         json_response('Ny fas: Strid!'.to_json)
     end
 
+    def get_battles
+        json_response(Battle.where(turn: @current_turn).all.select{|b| b.winner.nil?}.to_json(
+            :include => {
+                :warbands => {
+                    :except => [:place_id]
+                }
+            },
+            :except => [:place_id]
+        ))
+    end
+
+    def get_actions
+        json_response(Action.where(turn: @current_turn).to_json(
+            :include => {
+                :warband => {
+                    :except => [:place_id, :typ]
+                }
+            },
+            :except => [:place_id]
+        ))
+    end
+
     #private
     def set_current_turn
         @current_turn = Turn.last
@@ -71,8 +93,9 @@ class TurnsController < ApplicationController
                 # If the controlling warband is nearby, create a battle.    
                 elsif destination.linked_places.exists?(destination.warband.place.id) || destination.warband.place == destination
                     puts "Controlling warband nearby"
-                    b = Battle.new(place: action.place, turn: @current_turn)
-                    b.warbands = [destination.warband, action.warband]
+                    b = Battle.find_or_create_by(place: action.place, turn: @current_turn)
+                    b.warbands << destination.warband if b.warbands.empty?
+                    b.warbands << action.warband
                     b.save
                 else
                     puts "Uncontested"

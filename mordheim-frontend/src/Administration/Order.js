@@ -91,8 +91,7 @@ class Order extends Component {
                 })
             }).then((rsp) => {
                 if (rsp.status == 200) {
-                    rsp.json().then((data) =>{
-                    })
+                    console.log('Order mottagen')
                 } else {
                     throw new Error("Failed logon")
                 }

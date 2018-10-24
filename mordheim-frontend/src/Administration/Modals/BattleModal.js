@@ -23,8 +23,9 @@ class BattleModal extends Component {
                         <ControlLabel>Vinnare:</ControlLabel>
                         <FormControl componentClass="select" onChange={(e) => this._onChangeWinner(e)}>
                             <option value="" selected disabled>Välj vinnare</option>
-                            <option value={this.props.battle.warbands[0].id}>{this.props.battle.warbands[0].namn}</option>
-                            <option value={this.props.battle.warbands[1].id}>{this.props.battle.warbands[1].namn}</option>
+                            {this.props.battle.warbands.map((warband, index) => {
+                                return <option value={warband.id}>{warband.namn}</option>
+                            })}
                         </FormControl>
                     </FormGroup>
                     {this.state.showLoserMove ? 
