@@ -75,8 +75,16 @@ class TurnsController < ApplicationController
             destination = action.place
             if destination.warband != action.warband
                 puts "Action-warband doesn't control destination"
-                # If the destination is uncontrolled, check for other warbands moving in. Else, just move there.
-                if destination.warband.nil?
+
+                # If the controlling warband is nearby, create a battle.
+                if !destination.warband.nil? && (destination.linked_places.exists?(destination.warband.place.id) || destination.warband.place == destination)
+                    puts "Controlling warband nearby"
+                    b = Battle.find_or_create_by(place: action.place, turn: @current_turn)
+                    b.warbands << destination.warband if b.warbands.empty?
+                    b.warbands << action.warband
+                    b.save
+                # If the destination is uncontrolled/undefended, check for other warbands moving in. Else, just move there.
+                else
                     puts "Destination uncontrolled"
                     opposed = false
                     Action.where(place: destination, turn: @current_turn).where.not(warband: action.warband).each do |opposing_action|
@@ -90,16 +98,6 @@ class TurnsController < ApplicationController
                     unless opposed
                         unopposed_moves << [action.warband, destination]                      
                     end
-                # If the controlling warband is nearby, create a battle.    
-                elsif destination.linked_places.exists?(destination.warband.place.id) || destination.warband.place == destination
-                    puts "Controlling warband nearby"
-                    b = Battle.find_or_create_by(place: action.place, turn: @current_turn)
-                    b.warbands << destination.warband if b.warbands.empty?
-                    b.warbands << action.warband
-                    b.save
-                else
-                    puts "Uncontested"
-                    unopposed_moves << [action.warband, destination]
                 end
             else
                 # If the destination is controlled by the moving warband, it's unopposed.
