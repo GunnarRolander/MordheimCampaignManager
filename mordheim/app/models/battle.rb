@@ -29,7 +29,7 @@ class Battle < ApplicationRecord
         examined_places << places_to_examine
       end
 
-    return retreats
     end
+    return retreats
   end
 end
