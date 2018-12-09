@@ -8,6 +8,7 @@ class Warband < ApplicationRecord
   has_many :controlled_places, class_name: 'Place'
 
   def visible_places
+    #visible_places = self.controlled_places.map { |place| place.linked_places }.flatten
     visible_places = [self.visited_places, self.place.linked_places].flatten
     return visible_places.uniq
   end
