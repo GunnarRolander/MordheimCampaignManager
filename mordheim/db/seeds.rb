@@ -8,8 +8,8 @@
 
 require 'json'
 
-pos_json = File.read('/home/gunnar/my_repos/MordheimCampaignManager/mordheim/db/place_positions.json')
-desc_json = File.read('/home/gunnar/my_repos/MordheimCampaignManager/mordheim/db/place_descriptions.json')
+pos_json = File.read('/home/seguro/my_repos/mordheimCampaignManager/mordheim/db/place_positions.json')
+desc_json = File.read('/home/seguro/my_repos/mordheimCampaignManager/mordheim/db/place_descriptions.json')
 pos_array = JSON.parse(pos_json)
 desc_array = JSON.parse(desc_json)
 set_up_places = {}
@@ -31,6 +31,7 @@ other_places.each_with_index do |place, idx|
     set_up_places[place["id"].to_i] = p
 end
 
+
 set_up_places.each_pair do |id, place|
     links = pos_array[id-1]["links"]
     links.each do |link_id|
@@ -38,6 +39,36 @@ set_up_places.each_pair do |id, place|
     end
     place.save
 end
+
+=begin
+set_up_places.each_pair do |id, place|
+    n_links = rand(2..5)
+    puts n_links
+    next if place.linked_places.length >= n_links
+
+    n_links -= place.linked_places.length
+    nearby_places = set_up_places.values.map { |p| p if place.lat.between?(p.lat-50, p.lat+50) && place.lng.between?(p.lng-50, p.lng+50) }.compact
+
+    nearby_places -= [place]
+
+    puts "nearby places: " + nearby_places.length.to_s
+    puts nearby_places
+
+    nearby_places -= place.linked_places
+
+    n_links.times do |i|
+        next if nearby_places.empty?
+        nearby_place = nearby_places.sample
+        next if nearby_place.nil?
+        puts nearby_place.nil?
+        nearby_places -= [nearby_place]
+
+        place.linked_places << nearby_place
+        nearby_place.linked_places << place
+        place.save
+    end
+end
+=end
 
 s = Spelare.create(namn: 'Gunnar', password: 'bananer', admin: true)
 s2 = Spelare.create(namn: 'Jens', password: 'bananer', admin: false)

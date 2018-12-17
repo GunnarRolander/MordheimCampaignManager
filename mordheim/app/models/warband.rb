@@ -10,6 +10,7 @@ class Warband < ApplicationRecord
   def visible_places
     visible_places = [self.controlled_places.map { |place| place.linked_places }.flatten, self.controlled_places].flatten
     #visible_places = [self.visited_places, self.place.linked_places].flatten
+    #visible_places = Place.all
     return visible_places.uniq
   end
 
