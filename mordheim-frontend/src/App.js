@@ -47,7 +47,7 @@ class App extends Component {
           <Grid>
             <Row className="show-grid">
               <Col className="customCol" xs={9} sm={9} md={9}>
-                <Map visiblePlaces={this.state.warband.visible_places} visibleLinks={this.state.warband.visible_links} 
+                <Map visiblePlaces={this.state.warband.visible_places} allPlaces={this.state.warband.all_places} visibleLinks={this.state.warband.visible_links} 
                 visibleWarbands={this.state.warband.visible_warbands} battles={this.state.warband.battles}/>
               </Col>
               <Col className="customCol" xs={3} sm={3} md={3}>

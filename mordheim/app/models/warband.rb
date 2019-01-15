@@ -14,12 +14,20 @@ class Warband < ApplicationRecord
     return visible_places.uniq
   end
 
+  def all_places
+    #Place.all.to_json(
+    #  :except => [:namn, :beskrivning, :warband_id, :updated_at, :created_at]
+    #)
+    Place.select("id, lat, lng").all
+  end
+
   def visible_links 
-    ids = Array.new
-    visible_places.each do |place|
-      ids << place.id
-    end
-    return Link.where(place_id: ids, linked_place_id: ids).all.pluck(:place_id, :linked_place_id)
+    #ids = Array.new
+    #visible_places.each do |place|
+    #  ids << place.id
+    #end
+    #return Link.where(place_id: ids, linked_place_id: ids).all.pluck(:place_id, :linked_place_id)
+    return Link.all
   end
 
   def visible_warbands

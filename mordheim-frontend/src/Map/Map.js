@@ -130,16 +130,21 @@ class Map extends React.Component {
 
   _generateGraphics(layerBounds) {    
     let visiblePlaces = this.props.visiblePlaces
+    let allPlaces = this.props.allPlaces
     this.props.visibleLinks.map((link) => {
-      let place = visiblePlaces.find(p => p.id == link[0])
-      let linked_place = visiblePlaces.find(p => p.id == link[1])
+      let place = allPlaces.find(p => p.id == link.place_id)
+      let linked_place = allPlaces.find(p => p.id == link.linked_place_id)
 
       let marker = L.polyline([[place.lat, place.lng],[linked_place.lat, linked_place.lng]], {color: '#101010', opacity: 0.6})
       marker.addTo(layerBounds)
       
     })
     
-    visiblePlaces.map((place) => {
+    allPlaces.map((place) => {
+      let visiblePlace = visiblePlaces.find(p => p.id == place.id)
+      if (visiblePlace) {
+        place = visiblePlace
+      }
       let marker = L.circleMarker([place.lat, place.lng], {color: "#101010", fillColor: this._getColour(place.warband_id), opacity: 0.9, fillOpacity: 1, radius: this._getRadius(place)}
       )
       console.log([place.lat, place.lng])
@@ -149,7 +154,11 @@ class Map extends React.Component {
     
     let coming_battles = this.props.battles.filter(battle => battle.winner_id == null)
     
-    visiblePlaces.map((place) => {
+    allPlaces.map((place) => {
+      let visiblePlace = visiblePlaces.find(p => p.id == place.id)
+      if (visiblePlace) {
+        place = visiblePlace
+      }
       let marker = L.marker([place.lat, place.lng], {color: '#000000', opacity: 0.6})
       
       let battle = coming_battles.filter(battle => battle.place_id == place.id)

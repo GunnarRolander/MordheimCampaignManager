@@ -36,7 +36,7 @@ class WarbandsController < ApplicationController
                 }
 
             }, 
-            :methods => [:visible_places, :visible_links, :current_action, :visible_warbands])
+            :methods => [:all_places, :visible_places, :visible_links, :current_action, :visible_warbands])
         )
     end
 

@@ -17,12 +17,12 @@ class PlaceInfoModal extends Component {
         return <div className="static-modal">
             <Modal show={this.props.show} onHide={()=> this._hide()}>
                 <Modal.Header>
-                    <Modal.Title>{this.props.place.namn}</Modal.Title>
+                    <Modal.Title>{this.props.place.namn ? this.props.place.namn : "??????"}</Modal.Title>
                 </Modal.Header>
 
                 <Modal.Body>
                     <strong>CPV: {this.props.cpv}</strong><br/>
-                    {this.props.place.beskrivning}
+                    {this.props.place.beskrivning ? this.props.place.beskrivning : "Unknown area"}
                     {controllingWarband ? <b><br/>Kontrolleras av {controllingWarband.namn}</b> : null}
                 </Modal.Body>
 
