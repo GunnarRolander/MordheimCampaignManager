@@ -10,7 +10,7 @@ class WarbandsController < ApplicationController
     end
 
     def create_warband
-        starting_place = Place.first(8).select {|p| p.warband.nil? }.sample
+        starting_place = Place.last(13).select {|p| p.warband.nil? }.sample
         w = @spelare.create_warband!(namn: params['warband_name'], typ: params['warband_type'], 
             colour: params['colour'], place: starting_place)
         w.visited_places << starting_place
