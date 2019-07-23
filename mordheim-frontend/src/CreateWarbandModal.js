@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Grid, FormControl, ControlLabel, Button, FormGroup, Modal} from 'react-bootstrap';
 import { SliderPicker } from 'react-color';
+import { myConfig } from './config.js';
 
 class CreateWarbandModal extends Component {
     constructor(props) {
@@ -83,7 +84,7 @@ class CreateWarbandModal extends Component {
 
     _createWarband() {
         if(localStorage.getItem('username') && localStorage.getItem('password')) {
-            let authUrl = 'http://localhost:3000/warband/create'
+            let authUrl = myConfig.apiUrl + '/warband/create'
       
             let headers = new Headers({
                 'Accept': 'application/json',

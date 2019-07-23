@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Grid, Row, Col, Button, Panel} from 'react-bootstrap';
 import OrderModal from './Modals/OrderModal.js'
+import { myConfig } from './../config.js';
 
 class Order extends Component {
     constructor(props) {
@@ -73,7 +74,7 @@ class Order extends Component {
     _updateAction(label, place_id) {
 
         if(localStorage.getItem('username') && localStorage.getItem('password')) {
-            let authUrl = 'http://localhost:3000/actions/register_action'
+            let authUrl = myConfig.apiUrl + '/actions/register_action'
       
             let headers = new Headers({
                 'Accept': 'application/json',

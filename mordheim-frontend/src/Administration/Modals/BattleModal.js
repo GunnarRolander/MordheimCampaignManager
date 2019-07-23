@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Grid, FormControl, ControlLabel, Button, FormGroup, Modal} from 'react-bootstrap';
+import { myConfig } from './../../config.js';
 
 class BattleModal extends Component {
     constructor(props) {
@@ -69,7 +70,7 @@ class BattleModal extends Component {
 
     _saveResult(){
         if(localStorage.getItem('username') && localStorage.getItem('password')) {
-            let authUrl = 'http://localhost:3000/battles/register_result'
+            let authUrl = myConfig.apiUrl + '/battles/register_result'
       
             let headers = new Headers({
                 'Accept': 'application/json',

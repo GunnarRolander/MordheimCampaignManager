@@ -3,6 +3,7 @@ import {Grid, Row, Col, Button, Panel} from 'react-bootstrap';
 import TurnCounter from './TurnCounter.js'
 import BattleList from './BattleList.js'
 import Order from './Order.js'
+import { myConfig } from './../config.js';
 
 class AdministrationPanel extends Component {
     constructor(props) {
@@ -34,7 +35,7 @@ class AdministrationPanel extends Component {
 
     _getTurn() {
         if(localStorage.getItem('username') && localStorage.getItem('password')) {
-            let authUrl = 'http://localhost:3000/turn'
+            let authUrl = myConfig.apiUrl + '/turn'
       
             let headers = new Headers({
                 'Accept': 'application/json',

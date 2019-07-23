@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {ListGroup, ListGroupItem, Button, Modal} from 'react-bootstrap';
+import { myConfig } from './../../config.js';
 
 class TurnInfoModal extends Component {
     constructor(props) {
@@ -50,9 +51,9 @@ class TurnInfoModal extends Component {
 
     _nextClick() {
         if(localStorage.getItem('username') && localStorage.getItem('password')) {
-            let authUrl = 'http://localhost:3000/turn/next_turn'
+            let authUrl = myConfig.apiUrl + '/turn/next_turn'
             if(this.props.turn.fas == "Ordergivning") {
-                authUrl = 'http://localhost:3000/turn/next_phase'
+                authUrl = myConfig.apiUrl + '/turn/next_phase'
             }
       
             let headers = new Headers({
@@ -84,9 +85,9 @@ class TurnInfoModal extends Component {
 
     _getList() {
         if(localStorage.getItem('username') && localStorage.getItem('password')) {
-            let authUrl = 'http://localhost:3000/turn/get_battles'
+            let authUrl = myConfig.apiUrl + '/turn/get_battles'
             if(this.props.turn.fas == "Ordergivning") {
-                authUrl = 'http://localhost:3000/turn/get_actions'
+                authUrl = myConfig.apiUrl + '/turn/get_actions'
             }
       
             let headers = new Headers({

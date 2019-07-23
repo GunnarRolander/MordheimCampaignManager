@@ -5,6 +5,7 @@ import Map from './Map/Map.js'
 import './App.css';
 import LoginModal from './LoginModal.js'
 import CreateWarbandModal from './CreateWarbandModal.js';
+import { myConfig } from './config.js';
 
 class App extends Component {
   constructor(props) {
@@ -70,7 +71,7 @@ class App extends Component {
 
   _authenticate(username, password){
     if(username && password) {
-      let authUrl = 'http://localhost:3000/warband'
+      let authUrl = myConfig.apiUrl + '/warband'
 
       let headers = new Headers()
 
