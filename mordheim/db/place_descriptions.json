@@ -26,7 +26,7 @@
  {
     "name" : "Common Neighborhood",
     "cpv" : "0",
-    "description" : "This is a common residential area. Most of the inhabitants where ill prepared for Sigmar's Judgment, so they had to leave most of their few valuables behind. The ruins are in a decrepit state, and wandering in this area is very dangerous. Anyone visiting this area could rescue trapped family members, heirlooms and other valuables.\n\nWarband is affected by Looting (Advanced Rules) even if battles took place during the turn. Scenarios 1-9 (RB), 'Kidnapped' (A02), 'Ambush' (A02)"
+    "description" : "This is a common residential area. Most of the inhabitants where ill prepared for Sigmar's Judgment, so they had to leave most of their few valuables behind. The ruins are in a decrepit state, and wandering in this area is very dangerous. Anyone visiting this area could rescue trapped family members, heirlooms and other valuables.\n\nWarband is affected by Looting (Advanced Rules) even if battles took place during the turn. \n\nScenarios 1-9 (RB), 'Kidnapped' (A02), 'Ambush' (A02)"
  },
  {
     "name" : "Count Steinhardt’s Palace",
@@ -61,7 +61,7 @@
  {
     "name" : "Herring",
     "cpv" : "2 pts for all human mercenary, 1 for everyone else.",
-    "description" : "Located near Raven Barracks, this used to be the Ulrican Quarter and where the Middenheimers, Ostlanders and Kislevites lived. Ulricans used to keep vicious guard dogs to discourage Sigmarite visitors. Now the area is abandoned and the effects of the Wyrdstone had mutated the dogs to an even higher level of horror. \n\nMiddenheimers, Ostlanders and Kislevites warbands know the general layout of this area very well (it is modeled after a military standard pattern) so they may infiltrate (as per Skaven skill p93) up to 3 models onto the board. Scenarios 1-9 (RB), 'Kidnapped' (A02), 'Ambush' (A02)."
+    "description" : "Located near Raven Barracks, this used to be the Ulrican Quarter and where the Middenheimers, Ostlanders and Kislevites lived. Ulricans used to keep vicious guard dogs to discourage Sigmarite visitors. Now the area is abandoned and the effects of the Wyrdstone had mutated the dogs to an even higher level of horror. \n\nMiddenheimers, Ostlanders and Kislevites warbands know the general layout of this area very well (it is modeled after a military standard pattern) so they may infiltrate (as per Skaven skill p93) up to 3 models onto the board. \n\nScenarios 1-9 (RB), 'Kidnapped' (A02), 'Ambush' (A02)."
  },
  {
     "name" : "Imperial Armory",
@@ -71,7 +71,7 @@
  {
     "name" : "Imperial Stables",
     "cpv" : "2 pts for Bretonnian Knights, 1 for everyone else.",
-    "description" : "Once the home of the finest of horses outside of Araby, the Emperor’s own horses were once raised here in Mordheim. Count Steinhardt spent lavishly on the stables. The horses were equipped with the finest leather saddles and ate the finest oats. In the last days of Mordheim, the Count unleashed his mounted troops on the people. They were able to clear entire streets at a time until the townsfolk eventually brought down the mounted knights.\n\n Warband is affected by Looting (Advanced Rules) even if battles took place during the turn. Scenarios 1-9 (RB), 'Kidnapped' (A02), ‘Ambush’ (A02)."
+    "description" : "Once the home of the finest of horses outside of Araby, the Emperor’s own horses were once raised here in Mordheim. Count Steinhardt spent lavishly on the stables. The horses were equipped with the finest leather saddles and ate the finest oats. In the last days of Mordheim, the Count unleashed his mounted troops on the people. They were able to clear entire streets at a time until the townsfolk eventually brought down the mounted knights.\n\n Warband is affected by Looting (Advanced Rules) even if battles took place during the turn. \n\nScenarios 1-9 (RB), 'Kidnapped' (A02), ‘Ambush’ (A02)."
  },
  {
     "name" : "Inventors",
@@ -81,7 +81,7 @@
  {
     "name" : "Market Square",
     "cpv" : "2",
-    "description" : "The center of Mordheim’s commerce, the Market Square sold anything that was available to the Empire. Fine wines from Bretonnia, soft silks from Tilea, and warm furs from Kislev. Everything could be found here, if you knew whom to ask. Now, the only thing one could surely find within is a horrible death. \n\nThe area is so rich that if a warband remains in the area, spends a turn looting and does not engage in any battles or are attacked, they may roll for Exploration, based on the number of uninjured heroes. This may be done once per campaign. Scenarios 1-9 (RB), ‘Cry of the Banshee’ (TC18), 'Kidnapped' (A02), ‘The Lost Prince’"
+    "description" : "The center of Mordheim’s commerce, the Market Square sold anything that was available to the Empire. Fine wines from Bretonnia, soft silks from Tilea, and warm furs from Kislev. Everything could be found here, if you knew whom to ask. Now, the only thing one could surely find within is a horrible death. \n\nThe area is so rich that if a warband remains in the area, spends a turn looting and does not engage in any battles or are attacked, they may roll for Exploration, based on the number of uninjured heroes. This may be done once per campaign. \n\nScenarios 1-9 (RB), ‘Cry of the Banshee’ (TC18), 'Kidnapped' (A02), ‘The Lost Prince’"
  },
  {
     "name" : "Merchant’s Quarters",
@@ -101,7 +101,7 @@
  {
     "name" : "Mordheim University",
     "cpv" : "2",
-    "description" : "Once, Mordheim University aspired to be the center of learning of the Empire, as the race for the largest library intensified. The University itself was scattered amongst several buildings, many of them former small homes. The school is now in ruins, any books or articles of importance have been removed. Oddly enough though the grounds of the Botany Department still seem to be untouched. Their scholastic recruitment slogan, “Come join us at MU, you have a blast!” proved to be prophetic. \n\nThere is a Witch that still lives at the College refusing to leave. A warband can buy poisons, drugs, garlic, healing herbs, or Tears of Shallaya at base price. The hero still has to roll for availability. She cares for her plants too much to hand them over and if you kill her how will her garden grow? Scenarios 2, 4, 6 (RB), 'The Pool' (A02), 'Monster Hunt' (A02)."
+    "description" : "Once, Mordheim University aspired to be the center of learning of the Empire, as the race for the largest library intensified. The University itself was scattered amongst several buildings, many of them former small homes. The school is now in ruins, any books or articles of importance have been removed. Oddly enough though the grounds of the Botany Department still seem to be untouched. Their scholastic recruitment slogan, “Come join us at MU, you have a blast!” proved to be prophetic. \n\nThere is a Witch that still lives at the College refusing to leave. A warband can buy poisons, drugs, garlic, healing herbs, or Tears of Shallaya at base price. The hero still has to roll for availability. She cares for her plants too much to hand them over and if you kill her how will her garden grow? \n\nScenarios 2, 4, 6 (RB), 'The Pool' (A02), 'Monster Hunt' (A02)."
  },
  {
     "name" : "Nightshade",
@@ -131,7 +131,7 @@
  {
     "name" : "Rat Hunters – Poor Quarter",
     "cpv" : "2 pts for Skaven, 1 for everyone else.",
-    "description" : "The poor quarter, located south-west between the Temple of Morr and the River Stir, where when even before the comet, plague and hunger were the inhabitants' constant companions. Much has changed now as the derelict hovels were mostly flattened by the impact and the rats are larger and some say bipedal…\n\nAny model that is more than 6” away from another friendly unit must make an All Alone Test. If it is failed then the model is taken Out of Action (OOA), but is not injured. Scenarios 1-9 (RB), 'Lair of the Snake' (TC9)."
+    "description" : "The poor quarter, located south-west between the Temple of Morr and the River Stir, where when even before the comet, plague and hunger were the inhabitants' constant companions. Much has changed now as the derelict hovels were mostly flattened by the impact and the rats are larger and some say bipedal…\n\nAny model that is more than 6” away from another friendly unit must make an All Alone Test. If it is failed then the model is taken Out of Action (OOA), but is not injured. \n\nScenarios 1-9 (RB), 'Lair of the Snake' (TC9)."
  },
  {
     "name" : "Rich Quarter",
