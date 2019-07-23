@@ -8,8 +8,8 @@
 
 require 'json'
 
-pos_json = File.read('/home/seguro/my_repos/mordheimCampaignManager/mordheim/db/place_positions_new.json')
-desc_json = File.read('/home/seguro/my_repos/mordheimCampaignManager/mordheim/db/place_descriptions.json')
+pos_json = File.read('/home/gunnar/my_repos/MordheimCampaignManager/mordheim/db/place_positions_new.json')
+desc_json = File.read('/home/gunnar/my_repos/MordheimCampaignManager/mordheim/db/place_descriptions.json')
 pos_array = JSON.parse(pos_json)
 desc_array = JSON.parse(desc_json)
 set_up_places = {}
@@ -91,8 +91,14 @@ end
 
 
 
-s = Spelare.create(namn: 'Gunnar', password: 'bananer', admin: true)
-s2 = Spelare.create(namn: 'Jens', password: 'bananer', admin: false)
+
+players_json = File.read('/home/gunnar/my_repos/MordheimCampaignManager/mordheim/db/players.json')
+players_array = JSON.parse(players_json)
+
+players_array.each do | player |
+    s = Spelare.create(namn: player['namn'], password: player['password'], admin: player['admin'])
+end
+
 t = Turn.create(nummer: 1, fas: "Ordergivning")
 
 #p = Place.create(namn: 'Testarea 1', beskrivning: 'Testest', lat: -177, lng: 156)

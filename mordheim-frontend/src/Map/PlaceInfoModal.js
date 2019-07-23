@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Grid, FormControl, ControlLabel, Button, FormGroup, Modal} from 'react-bootstrap';
+import marked from 'marked';
 
 class PlaceInfoModal extends Component {
     constructor(props) {
@@ -22,7 +23,7 @@ class PlaceInfoModal extends Component {
 
                 <Modal.Body>
                     <strong>CPV: {this.props.cpv}</strong><br/>
-                    {this.props.place.beskrivning ? this.props.place.beskrivning : "Unknown area"}
+                    <p dangerouslySetInnerHTML={{__html: marked(this.props.place.beskrivning ? this.props.place.beskrivning : "Unknown area", {sanitize: true})}} />
                     {controllingWarband ? <b><br/>Kontrolleras av {controllingWarband.namn}</b> : null}
                 </Modal.Body>
 
