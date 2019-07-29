@@ -96,7 +96,7 @@ players_json = File.read('/home/gunnar/my_repos/MordheimCampaignManager/mordheim
 players_array = JSON.parse(players_json)
 
 players_array.each do | player |
-    s = Spelare.create(namn: player['namn'], password: player['password'], admin: player['admin'])
+    s = Spelare.create(namn: player['namn'], password: player['password'], admin: player['admin'] == "True")
 end
 
 t = Turn.create(nummer: 1, fas: "Ordergivning")

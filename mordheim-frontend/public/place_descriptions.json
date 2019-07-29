@@ -1,202 +1,201 @@
 [{
-    "name" : "Black Pit Settlement",
-    "cpv" : "1/2; 2 pts for Undead, 1 for everyone else.",
-    "description" : "The most brutal of all encampments, is home of the most cruel of all human decadence shows; the gladiatorial pits. Not only this, but it is rumored that the Shadow Lord himself roams its streets and it is common to see Necromancers, mutants, Possessed and even Rat-Men in its streets.\n\nScenarios 1-9 (RB), 'Ambush' (A02)"
- },
- {
-    "name" : "Brigandsburg",
-    "cpv" : "1/2; 2 pts for Undead, 1 for everyone else.",
-    "description" : "Brigandsburg tends to house the more unsavory characters. Middenheimers abound here as do Witch Hunters. Some Reiklanders set up camp here and very few Marienburgers (after all it is too filthy for them). The Sisters have a presence here but it is only a safe house. Possessed are a rare site but do appear at times.\n\nHired Swords contracted out of Brigandsburg are hired at 75% of the base cost but their upkeep is the same. Heroes that go out searching for Rare items they must roll a d6 under their Initiative to keep careful watch of them selves or risk ambush. If the test is failed they do not get to search for items as they have to avoid the roving street thugs.\n\nScenarios 1-9 (RB), 'Ambush' (A02)"
- },
- {
-    "name" : "Cemetery of St. Voller",
-    "cpv" : "1/2; 2 pts for Undead, 1 for everyone else.",
-    "description" : "The Priests of Morr did their best to keep up with rising tide of the dead. The furthest areas of the Cemetery were the first to be filled. All of their toiling was for naught. This was the location where the Necromancer Marius Dire, began his grisly work and slowly began to bring the executed back to life. If he was able to finish his hideous work, no one knows. He has not been seen or heard from since the last horde of wandering zombies was sighted heading east.\n\nScenarios 1-9 (RB), 'Kidnapped' (A02), 'Ambush' (A02)"
- },
- {
-    "name" : "City Hall & Constabulary",
-    "cpv" : "1",
-    "description" : "The former Mordheim Constabulary was based here. This was a different branch of the Military arm of the city. The Constabulary would do the dirty work that the Guards of the Barracks were exempt from. This would include keeping the Black-market in check whenever possible, and to prevent behind the scenes actions interrupting the Count’s rulings. In this building was housed many secrets of every inhabitant in Mordheim. The Town Guard was the muscle while officers of the Constabulary were the brains.\n\nControlling warband can construct, based on hidden documentation, a Mordheim Map (+4 to roll.) once per campaign.\n\nScenarios 1-9 (RB), 'Ambush' (A02)"
- },
- {
-    "name" : "Clock Tower",
-    "cpv" : "1",
-    "description" : "The Clock Tower of Elector Count von Guyen was a gift from the city of Altdorf. The tower would ring the bells signaling the birth of Princes and Princess among other royal occasions. The tower is the tallest structure in the city itself and, for the most part, is still standing. This tower allows an unobstructed view of the entire city. Once the trademark of the market town, now desperate men (and worse) fight and die over its ruined landscape.\n\nThe defender of this territory can choose to go first, place first, and infiltrate (as per Skaven skill pg93) up to 3 models onto the board. If neither player is the defender then play as normal battle. Scenarios 1-9 (RB), 'Kidnapped' (A02), 'Ambush' (A02)"
- },
- {
-    "name" : "Common Neighborhood",
-    "cpv" : "0",
-    "description" : "This is a common residential area. Most of the inhabitants where ill prepared for Sigmar's Judgment, so they had to leave most of their few valuables behind. The ruins are in a decrepit state, and wandering in this area is very dangerous. Anyone visiting this area could rescue trapped family members, heirlooms and other valuables.\n\nWarband is affected by Looting (Advanced Rules) even if battles took place during the turn. Scenarios 1-9 (RB), 'Kidnapped' (A02), 'Ambush' (A02)"
- },
- {
-    "name" : "Count Steinhardt’s Palace",
-    "cpv" : "1",
-    "description" : "This once ostentatious palace is now but a ruin and its walls no longer manned by brave and loyal men-at-arms but by things of a far fouler breed, things best left unnamed…\n\nThe winning warband finds equipment that used to belong to the Palace guards. Roll 1D6 for each Hero: 1: Mace, 2: Sword, 3: Spear, 4: Bow, 5: Halberd, 6: Helmet. \n\nScenarios 1-9 (RB), ‘Treasure Hunt’ (A02), ‘The Headless One’ (TC12)"
- },
- {
-    "name" : "Crimson Lights",
-    "cpv" : "1",
-    "description" : "Where it was once possible to purchase more than just ale and stew. Also where the Thieves Guild were to be found. The gaudy signs and colorful silk and satin interior decoration now contrast strongly with the dusty grey of the rubble.\n\nScenarios 1-9 (RB), 'Ambush' (A02), ‘Street Brawl’ (A02)"
- },
- {
-    "name" : "Cutthroat's Haven",
-    "cpv" : "2 pts for Skaven, 1 for everyone else.",
-    "description" : "The most infamous and thrice cursed of all the encampments is the home of the scum of the land. Evil and unsavory characters walk on the area without fear, as if they own it ... and they probably do! Anyone with gold is allowed in and those without tend to find their hands in other people's pockets. In Cutthroat's Haven (if you can call it a haven) possessed walking the streets is a common site, as are undead and even Skaven. Fights break out routinely and only the most daring or stupid of merchants sell their wares here. It is said, 'Anything can be bought for a price in the Cutthroat's Haven!'. \n\nAll rare goods are at a +2 to find but cost twice what they would normally.\n\nScenarios 1-9 (RB), 'Ambush' (A02)."
- },
- {
-    "name" : "Executioner's Square",
-    "cpv" : "2 pts for Witch Hunters, Possessed and Undead, 1 for everyone else.",
-    "description" : "Before the comet hit, facing exorbitant taxes, the good people of Mordheim became desperate and crime began to escalate. As The Gaol became full with petty criminals, public executions seem like a good measure of determent. Farther than that, the public sadistic tendencies created this as entertainment ventures, and soon the city started charging fees for those attending the macabre spectacles. Furthermore, the executions became increasingly gruesome and cruel. When the disaster struck, a record crowd was gathered here to enjoy the execution of Gunther Griswald. This petty thief was condemned to be fed alive to stripper worms.\n\nNow it is rumored to be haunted by those who, unjustified, were tortured and executed here.\n\nScenarios 1-9 (RB), 'Ambush' (A02)."
- },
- {
-    "name" : "Great Library of Mordheim",
-    "cpv" : "3",
-    "description" : "The Great Library of Mordheim has been a shining star in the Empire. Many ancient tomes regarding everything from unusual anatomies to old family recipes can be found here. When the rioting crowd reached the Library, many of the priceless tomes were either ruined or stolen, especially the entire Martha Steinhart (not related) on cooking series. Not all the books left behind were worthless though. Many of the books written in long dead languages were ignored and can still be found amongst the destroyed shelves. \n\nIf a warband remains in the area, spends a turn looting and does not engage in any battles or are attacked, they may find some of the lost tomes. This can only be done once per game. Roll a d6 for each item on the list, an item is found if the roll meets the requirements. Book of the Dead (6+); Tome of Magic (6+); (Un) Holy Tome (5+); (Un) Holy relic (4+); Halfling Cookbook (3+); Lantern (3+) \n\nScenarios 1-9 (RB), ‘The Wizard's Mansion’ (A02), ‘The Mummy!’ (TC15)."
- },
- {
-    "name" : "Halibut",
-    "cpv" : "1",
-    "description" : "Located between the Great Library and the City Walls, this was formerly a predominantly Sigmarite residential area and also the only area that was left virtually intact.\n\nScenarios 1-9 (RB), 'Kidnapped' (A02), 'Ambush' (A02)."
- },
- {
-    "name" : "Herring",
-    "cpv" : "2 pts for all human mercenary, 1 for everyone else.",
-    "description" : "Located near Raven Barracks, this used to be the Ulrican Quarter and where the Middenheimers, Ostlanders and Kislevites lived. Ulricans used to keep vicious guard dogs to discourage Sigmarite visitors. Now the area is abandoned and the effects of the Wyrdstone had mutated the dogs to an even higher level of horror. \n\nMiddenheimers, Ostlanders and Kislevites warbands know the general layout of this area very well (it is modeled after a military standard pattern) so they may infiltrate (as per Skaven skill p93) up to 3 models onto the board. Scenarios 1-9 (RB), 'Kidnapped' (A02), 'Ambush' (A02)."
- },
- {
-    "name" : "Imperial Armory",
-    "cpv" : "2 pts for Bretonnian Knights and all human mercenary, 1 for everyone else.",
-    "description" : "In this former collection of buildings was located the Imperial Engineers of Mordheim and their Armory. Much of what was value has already been confiscated. Still, people have come out of Mordheim with weapons of tremendous power and unusual human design. The only place in Mordheim they could have come from is here at the Armory. There must be some secret rooms located in the basements. The Imperial Engineers guarded their secret designs well. Many of the Engineers left before the comet fell, seeing the madness of Count Steinhardt growing. They were able to lock up their constructions many levels underground in vaults that could rival Dwarfs in their strength. \n\nIf a warband remains in the area, spends a turn looting and does not engage in any battles or are attacked, they will get to roll once for each hero: on a roll of 4+ roll again for the Gunsmith (pg 138), on a roll of 5+ roll again for the Armourer (pg138), on a roll of 6 roll once for the Dwarf Smithy (pg 140). A warband can only roll once per campaign and can only get one roll on each table so there is no need to search it twice and it is best done when you have a full amount of Heroes. \n\nScenarios 1-9 (RB), ‘Ambush’ (A02)."
- },
- {
-    "name" : "Imperial Stables",
-    "cpv" : "2 pts for Bretonnian Knights, 1 for everyone else.",
-    "description" : "Once the home of the finest of horses outside of Araby, the Emperor’s own horses were once raised here in Mordheim. Count Steinhardt spent lavishly on the stables. The horses were equipped with the finest leather saddles and ate the finest oats. In the last days of Mordheim, the Count unleashed his mounted troops on the people. They were able to clear entire streets at a time until the townsfolk eventually brought down the mounted knights.\n\n Warband is affected by Looting (Advanced Rules) even if battles took place during the turn. Scenarios 1-9 (RB), 'Kidnapped' (A02), ‘Ambush’ (A02)."
- },
- {
-    "name" : "Inventors",
-    "cpv" : "1",
-    "description" : "Located north of The Gaol, this is where the engineers and scholars lived, many libraries, workshops, apothecaries and small colleges once stood. Now the area is abandoned and the inventions and knowledge there spawned, now lays corrupt waiting for its next victim.\n\nThe winning warband may find one item, roll twice 1D6 and pick one: 1-2 Lantern, 3: Halfling Cookbook, 4: Healing Herbs; 5: Tome of Magic; 6: Mordheim Map. \n\nScenarios 1-9 (RB)."
- },
- {
-    "name" : "Market Square",
-    "cpv" : "2",
-    "description" : "The center of Mordheim’s commerce, the Market Square sold anything that was available to the Empire. Fine wines from Bretonnia, soft silks from Tilea, and warm furs from Kislev. Everything could be found here, if you knew whom to ask. Now, the only thing one could surely find within is a horrible death. \n\nThe area is so rich that if a warband remains in the area, spends a turn looting and does not engage in any battles or are attacked, they may roll for Exploration, based on the number of uninjured heroes. This may be done once per campaign. Scenarios 1-9 (RB), ‘Cry of the Banshee’ (TC18), 'Kidnapped' (A02), ‘The Lost Prince’"
- },
- {
-    "name" : "Merchant’s Quarters",
-    "cpv" : "2",
-    "description" : "The fat moneylenders had to live somewhere, where better than near the Barracks. Everyone knows the Merchant’s kept the valuable items at their own homes. The problem was nobody could get them when the entire Town Guard was house across the street. \n\nThe area is so rich that if a warband remains in the area, spends a turn looting, and does not engage in any battle, they may roll for Exploration, based on the number of uninjured heroes, with 4 rerolls. This may be done once per campaign. \n\nScenarios 1-9 (RB), 'Cry of the Banshee' (TC18), 'Kidnapped' (A02), 'The Lost Prince' (A02)."
- },
- {
-    "name" : "Metal Workers",
-    "cpv" : "2 pts for Dwarf, 1 for everyone else.",
-    "description" : "Part of the Rich Quarter, this is where the metals workers lived and worked. This busy district also housed a small Dwarf community.\n\nDwarfs get an additional dice for the Exploration chart, as they know this Quarter better than anyone else… alive that is! \n\nScenarios 1-9 (RB)."
- },
- {
-    "name" : "Mordheim Breweries",
-    "cpv" : "2 pts for Dwarf and Pirate, 1 for everyone else.",
-    "description" : "Not long before the fall of the comet, local breweries were all the rage. Mordheim had a special ale called Serpent’s Bile that could rival Bugman’s Brew in taste and efficacy. Every Dwarf knew this brew must have come from a fellow dwarf, but who would give their secret to the humans? There are some who would pay a dear price for the recipe of Serpent’s Bile. The Dwarf’s would like to prevent that.\n\nThe winning warband may find a couple of items in an abandoned warehouse. Roll 1D6 for each Hero: 1-3: Bugman's Brew, 4: Serpent’s Bile (same as Bugman’s Brew + 1S, +1T, -1WS, -1BS), 5: Lantern, 6: Gromril Axe. \n\nScenarios 1-9 (RB), 'Kidnapped' (A02), 'Ambush' (A02)."
- },
- {
-    "name" : "Mordheim University",
-    "cpv" : "2",
-    "description" : "Once, Mordheim University aspired to be the center of learning of the Empire, as the race for the largest library intensified. The University itself was scattered amongst several buildings, many of them former small homes. The school is now in ruins, any books or articles of importance have been removed. Oddly enough though the grounds of the Botany Department still seem to be untouched. Their scholastic recruitment slogan, “Come join us at MU, you have a blast!” proved to be prophetic. \n\nThere is a Witch that still lives at the College refusing to leave. A warband can buy poisons, drugs, garlic, healing herbs, or Tears of Shallaya at base price. The hero still has to roll for availability. She cares for her plants too much to hand them over and if you kill her how will her garden grow? Scenarios 2, 4, 6 (RB), 'The Pool' (A02), 'Monster Hunt' (A02)."
- },
- {
-    "name" : "Nightshade",
-    "cpv" : "2 pts for evil, 1 for everyone else.",
-    "description" : "Just east of The Pit, the Nightshade is a devastated collective ruin. One of the most dangerous areas of Mordheim.\n\nScenarios 1-9 (RB), 'Monster Hunt' (A02)"
- },
- {
-    "name" : "Palace Gardens",
-    "cpv" : "1",
-    "description" : "These lushly overgrown gardens were once the decorated walkway to the Palace. While the Palace itself sustained heavy damage by the comet, its gardens seem almost untouched. The plants here grow at an alarming rate, and mutations are starting to occur. Due to the thick canopy, the trees have completely blocked out the sun. \n\nScenarios 2, 4, 6 (RB), 'The Pool' (A02), 'Monster Hunt' (A02)."
- },
- {
-    "name" : "Pleasure District",
-    "cpv" : "2 pts for Orcs & Goblins Hordes and all human mercenary, 1 for everyone else.",
-    "description" : "The once very prosperous Wench Alley, with its red tinged lanterns, was popular with the poor and the rich as well as locals and visitors alike. Of course there were those against these adulterous and seedy acts. Still, this lively street had a large, if quiet, backing from the town itself.\n\nScenarios 1, 5, 6, (RB), 'Kidnapped' (A02), 'Ambush' (A02)."
- },
- {
-    "name" : "Quayside",
-    "cpv" : "2 pts for Pirates, 1 for everyone else.",
-    "description" : "A suitable name for the docks and warehouses along the Stir. At one time this area, including the Middle Bridge, was the center of all river-bound commerce of the area and its surrounding market places the envy of the Empire, and later defiled by the corrupted Trade Guilds. Now the quarter is a diabolical mockery of all that it once was. Supernatural fires still burn in many places and at night the whole area glows with a macabre orange hue.\n\nThe winning warband may find a couple of items in an abandoned warehouse. On a roll of 4+ on each Hero, roll 1D6 for each: 1-3: Net, 4: Rope & Hook, 5: Lantern, 6: Boat Hook (Pirate Warband - TC9).\n\nScenarios 1-9 (RB), 'Ambush'"
- },
- {
-    "name" : "Raven Barracks",
-    "cpv" : "1",
-    "description" : "The Mordheim Guards were once housed here. The stone walls could not hold back the anger of the city. This was the last bastion of the Town Guard as the city rose up against them and their draconic measures to secure peace. Some say the Guards were simply being heavy handed in order to use fear to quell the crowds. Still others say the Town Guard appeared to smile as they swung their swords and loosed their arrows. Either way, this was their final home.\n\nAny warband that captures this area may roll once for the Smithy (RB p137) from the Exploration Chart.\n\nScenarios 1-9 (RB), 'Ambush' (A02)."
- },
- {
-    "name" : "Rat Hunters – Poor Quarter",
-    "cpv" : "2 pts for Skaven, 1 for everyone else.",
-    "description" : "The poor quarter, located south-west between the Temple of Morr and the River Stir, where when even before the comet, plague and hunger were the inhabitants' constant companions. Much has changed now as the derelict hovels were mostly flattened by the impact and the rats are larger and some say bipedal…\n\nAny model that is more than 6” away from another friendly unit must make an All Alone Test. If it is failed then the model is taken Out of Action (OOA), but is not injured. Scenarios 1-9 (RB), 'Lair of the Snake' (TC9)."
- },
- {
-    "name" : "Rich Quarter",
-    "cpv" : "1",
-    "description" : "Where the rich and famous lived and died when disaster struck. This was the rich quarter, which means there is more stuff lying around and more valuable items to be found.\n\nThe winning warband may find luxury items, roll twice 1D6: 1-3: 2D6 gc, 4: Ithilmar Sword; 5: Cathayan Silk Clothes; 6: Crossbow Pistol. \n\nScenarios 1-9 (RB), 'Cry of the Banshee' (TC18), 'Kidnapped' (A02), 'The Lost Prince' (A02)."
- },
- {
-    "name" : "Rupert von Endon's Amphitheater",
-    "cpv" : "2 pts for Pit Fighter and Carnival of Chaos, 1 for everyone else.",
-    "description" : "By day the Amphitheatre was a Golden Building known for its puppet shows and other plays put on by playwrights of the Empire. By Night it was known as the Blood Theatre for that was when it became host to the Gladiatorial games. Pit fighting was outlawed in the Empire, but Count Steinhardt denied it existed even though he was the regularly the Host of Honor. One of the more bizarre highlights of the Theatre would be when Hedge wizards and warlocks who had been captured in battle would be forced to fight each other in awesome magical duels.\n\nAll rolls for magic subtract 1 from their rolls on 2d6 when attempting to cast a spell due to the anti-magic defenses of the building, except for the Carnival of Chaos warband. Furthermore this warband always decides who starts combat. \n\nScenarios 1-9 (RB), 'Ambush' (A02)."
- },
- {
-    "name" : "Sigmarheaven",
-    "cpv" : "2 pts for Witch Hunters and Sisters of Sigmar, 1 for everyone else.",
-    "description" : "This is the last bastion of hope and goodwill around Mordheim. Founded my Sigmarites, is by far the safest of all settlements as a local militia is maintained by the tithe paid by all its inhabitants. Sisters of Sigmar, Witch Hunters and human mercenaries abound here.\n\nScenarios 1-9 (RB), 'Ambush' (A02)."
- },
- {
-    "name" : "Statue of Count Gotthard",
-    "cpv" : "1",
-    "description" : "This remarkable landmark once depicted a statue of Count Gotthard, founder of Mordheim and hero to its people, but was replaced by a statue of Count Steinhardt, which provoked the famous riots of 1979. Nobles and Merchants hired mercenaries to quench the rebels, and after their work was done they stayed, bullying their way around the common folk. People who witnessed the Wrath of Sigmar say that Steinhardt's statue now appears to reflect the Count's decadent soul.\n\nScenarios 1-9 (RB), 'Kidnapped' (A02), 'Ambush' (A02)."
- },
- {
-    "name" : "Steinhardt Memorial Gardens",
-    "cpv" : "1",
-    "description" : "An eerie place of twisted trees, crumbled fountains, and blasted gardens remains in mockery of this once spectacular garden. The Undead obviously love it here... such a large graveyard will always attract its share of restless dead.\n\nScenarios 2, 4, 6 (RB), 'The Pool' (A02), 'Monster Hunt' (A02)."
- },
- {
-    "name" : "Temple of Morr",
-    "cpv" : "2 pts for Possessed and Undead, 1 for everyone else.",
-    "description" : "The acolytes of Morr tended to the gardens of the Cemetery of St. Voller from this small church. The dour faced priests had their arms and temple full from the dead they had to see to. There was no way the priests could keep up; still, they tried. Many townspeople tried to assist in the removal of bodies. Unknowingly, one of these persons was Marius Dire, a Necromancer. The priests had, unwittingly, allowed access to the dead, a person who would undermine their entire effort. Soon, one by one, the bodies rose and began to dig up the newly buried inhabitants. Marius was successful in usurping the priests. Many of the Morr priests were slaughtered, yet one did escape.\n\nScenarios 1-9 (RB), 'Cry of the Banshee' (TC18), 'Kidnapped' (A02)."
- },
- {
-    "name" : "Temple of Sigmar",
-    "cpv" : "4 pts for Sisters of Sigmar and Witch Hunters, 2 for everyone else.",
-    "description" : "The most powerful church in the Empire belongs to Sigmar. In most cities the Temple of Sigmar is the seat of political power. In Mordheim, the Temple is practically the center of all activities. From its location it is easily accessible to the rich and poor alike. When the comet hit, the entire city was sure that the Temple was destroyed. When the smoke cleared, by the Grace of Sigmar himself, the Church and all of its spires remained standing and apparently unharmed. The Temple is the only true location of safety in the entire city. \n\nSisters, Witch Hunters, and any other human non-evil warband that holds the Temple of Sigmar can ignore a result requiring a character to miss a game due to injury. The healing power of Sigmar magically brings the character back to full health on a roll of 5+. No effects on previous/permanent injuries. \n\nScenarios 1-9 (RB), 'Cry of the Banshee' (TC18), 'Kidnapped' (A02)."
- },
- {
-    "name" : "The Devil's Den",
-    "cpv" : "1",
-    "description" : "This area of used to harbor many shady characters that normally resided at the Poor Quarters, along with the Rat Hunters. This area was hit the hardest when the comet arrived. The people of this area were not prepared and had the least amount of resources to lose. Many of the inhabitants of this area resorted to many despicable acts in order to survive. If anyone could control or contain the horde of people living here, they could potentially have a mob of eager followers.\n\nAny model that is more than 6” away from another friendly unit must make an All Alone Test. If it fails then the model is taken Out of Action (OOA), but is not injured. \n\nScenarios 1-9 (RB), 'Kidnapped' (A02), 'Ambush' (A02)."
- },
- {
-    "name" : "The Gaol",
-    "cpv" : "2 pts for Beastmen, 1 for everyone else.",
-    "description" : "This is where the infamous prison once stood. Unfortunately, the men behind bars survived Sigmar's Wrath better than their guards. Months after the disaster some are still prisoners, now mad from the trauma, and their maddening howls filled the night's air. Other hundreds were liberated by the comet's blast and now roam the area in violent gangs of scavengers and cannibals. To make matters worse, for years a twisted vampire had lain hidden within the cellars and vaults of the old Gaol. After a pitiful self-exile, he and his coven used the holocaust as a way to bring chaos and death to all the area inhabitants.\n\nSkaven get an additional dice for the Exploration chart. \n\nScenarios 1-9 (RB), ‘Street Brawl’ (A02)."
- },
- {
-    "name" : "The Pit",
-    "cpv" : "5",
-    "description" : "A glimpse of Hell in the very heart of the Empire, this is The Pit! There are no houses nor ruins here... just desolate nightmarish rubble. This is, by far, the most dangerous part of Mordheim.\n\nThis is a veritable gold mine... Wyrdstone mine, actually! \n\nEvil warbands always decides who starts combat. The winning warband gathers an extra D6 wyrdstone beyond what is found. The area all around The Pit’s area seems to have been barricaded. A warband needs resources in order to enter into this area. As such, a warband needs to have at least 10 Campaign Points for this undertaking. If a warband loses control of The Pit’s area, that warband also loses d3 areas as the band is routed. These must be pins nearest the area. \n\nScenarios 2, 4, 9 (RB), ‘Scourge & Purge’ - no buildings (TC7), ‘That's All Mine!’ - no buildings (TC10)"
- },
- {
-    "name" : "The Rock",
-    "cpv" : "4 pts for Sisters of Sigmar, 2 for everyone else .",
-    "description" : "The main Abbey of the Sisters of Sigmar is located on a small island on the River Stir. This proud monument has not only stood for centuries, but also remained unharmed by the devastation caused by the two-tailed comet. The Rock is the only beacon of light in Mordheim, as the Sisters continue their never-ending quest against evil, undead, Chaos and criminal masterminds who constantly attempt to take their Abbey and Mordheim for their nefarious intents.\n\nSisters of Sigmar in this area can ignore a result requiring a character to miss a game due to injury. The healing power of Sigmar magically brings the character back to full health. \n\nScenarios 2, 4, 6, 9 (RB), ‘The Script of Sigmar’ (TC9)"
- },
- {
-    "name" : "The Shades",
-    "cpv" : "3 pts for Bretonnian Knights, 1 for everyone else.",
-    "description" : "This dark area borders The Pit and it is almost as bad... Bretonnian Knights, who seek entrance to The Pit, make their first stance against evil here.\n\nScenarios 1-9 (RB), ‘Monster Hunt’ (A02), ‘Scourge & Purge’ (TC7), ‘That's All Mine!’ (TC10)."
- },
- {
-    "name" : "Wizard's Mansion",
-    "cpv" : "4",
-    "description" : "The very walls of the Wizard's Mansion are saturated with the magic of slain wizards. Many times strange lights and sounds have been heard coming from the tower. Of all the locales that have been looted, this is one that seems to remain untouched. The Mansion is said to be filled with many wondrous potions and magical items. Only the brave tempt the spells and wards that protect these buildings. Those that do may be brave, but they may also be dead for they are never seen again. \n\nUse the Wizard’s Mansion Special Scenario for any battles that take place here. If a warband remains in the area, spends a turn looting and does not engage in any battles or are attacked, they may search for magic items left behind. Choose a Hero to search, make a Toughness roll on a d6. If the warrior fails, then the search has failed, roll on the injury chart as the Hero has come across a wizard’s ward or has drunk something he shouldn’t have. If he succeeds, roll 3d6, if the result is an 18, the Hero has found a magical item; any other result is the amount of gold found instead of looting. \n\nScenarios 1-9 (RB), ‘The Wizard's Mansion’ (A02), ‘The Mummy!’"
- }
- ]
- 
+   "name" : "Black Pit Settlement",
+   "cpv" : "1/2; 2 pts for Undead, 1 for everyone else.",
+   "description" : "The most brutal of all encampments, is home of the most cruel of all human decadence shows; the gladiatorial pits. Not only this, but it is rumored that the Shadow Lord himself roams its streets and it is common to see Necromancers, mutants, Possessed and even Rat-Men in its streets.\n\nScenarios 1-9 (RB), 'Ambush' (A02)"
+},
+{
+   "name" : "Brigandsburg",
+   "cpv" : "1/2; 2 pts for Undead, 1 for everyone else.",
+   "description" : "Brigandsburg tends to house the more unsavory characters. Middenheimers abound here as do Witch Hunters. Some Reiklanders set up camp here and very few Marienburgers (after all it is too filthy for them). The Sisters have a presence here but it is only a safe house. Possessed are a rare site but do appear at times.\n\nHired Swords contracted out of Brigandsburg are hired at 75% of the base cost but their upkeep is the same. Heroes that go out searching for Rare items they must roll a d6 under their Initiative to keep careful watch of them selves or risk ambush. If the test is failed they do not get to search for items as they have to avoid the roving street thugs.\n\nScenarios 1-9 (RB), 'Ambush' (A02)"
+},
+{
+   "name" : "Cemetery of St. Voller",
+   "cpv" : "1/2; 2 pts for Undead, 1 for everyone else.",
+   "description" : "The Priests of Morr did their best to keep up with rising tide of the dead. The furthest areas of the Cemetery were the first to be filled. All of their toiling was for naught. This was the location where the Necromancer Marius Dire, began his grisly work and slowly began to bring the executed back to life. If he was able to finish his hideous work, no one knows. He has not been seen or heard from since the last horde of wandering zombies was sighted heading east.\n\nScenarios 1-9 (RB), 'Kidnapped' (A02), 'Ambush' (A02)"
+},
+{
+   "name" : "City Hall & Constabulary",
+   "cpv" : "1",
+   "description" : "The former Mordheim Constabulary was based here. This was a different branch of the Military arm of the city. The Constabulary would do the dirty work that the Guards of the Barracks were exempt from. This would include keeping the Black-market in check whenever possible, and to prevent behind the scenes actions interrupting the Count’s rulings. In this building was housed many secrets of every inhabitant in Mordheim. The Town Guard was the muscle while officers of the Constabulary were the brains.\n\nControlling warband can construct, based on hidden documentation, a Mordheim Map (+4 to roll.) once per campaign.\n\nScenarios 1-9 (RB), 'Ambush' (A02)"
+},
+{
+   "name" : "Clock Tower",
+   "cpv" : "1",
+   "description" : "The Clock Tower of Elector Count von Guyen was a gift from the city of Altdorf. The tower would ring the bells signaling the birth of Princes and Princess among other royal occasions. The tower is the tallest structure in the city itself and, for the most part, is still standing. This tower allows an unobstructed view of the entire city. Once the trademark of the market town, now desperate men (and worse) fight and die over its ruined landscape.\n\nThe defender of this territory can choose to go first, place first, and infiltrate (as per Skaven skill pg93) up to 3 models onto the board. If neither player is the defender then play as normal battle. Scenarios 1-9 (RB), 'Kidnapped' (A02), 'Ambush' (A02)"
+},
+{
+   "name" : "Common Neighborhood",
+   "cpv" : "0",
+   "description" : "This is a common residential area. Most of the inhabitants where ill prepared for Sigmar's Judgment, so they had to leave most of their few valuables behind. The ruins are in a decrepit state, and wandering in this area is very dangerous. Anyone visiting this area could rescue trapped family members, heirlooms and other valuables.\n\nWarband is affected by Looting (Advanced Rules) even if battles took place during the turn. \n\nScenarios 1-9 (RB), 'Kidnapped' (A02), 'Ambush' (A02)"
+},
+{
+   "name" : "Count Steinhardt’s Palace",
+   "cpv" : "1",
+   "description" : "This once ostentatious palace is now but a ruin and its walls no longer manned by brave and loyal men-at-arms but by things of a far fouler breed, things best left unnamed…\n\nThe winning warband finds equipment that used to belong to the Palace guards. Roll 1D6 for each Hero: 1: Mace, 2: Sword, 3: Spear, 4: Bow, 5: Halberd, 6: Helmet. \n\nScenarios 1-9 (RB), ‘Treasure Hunt’ (A02), ‘The Headless One’ (TC12)"
+},
+{
+   "name" : "Crimson Lights",
+   "cpv" : "1",
+   "description" : "Where it was once possible to purchase more than just ale and stew. Also where the Thieves Guild were to be found. The gaudy signs and colorful silk and satin interior decoration now contrast strongly with the dusty grey of the rubble.\n\nScenarios 1-9 (RB), 'Ambush' (A02), ‘Street Brawl’ (A02)"
+},
+{
+   "name" : "Cutthroat's Haven",
+   "cpv" : "2 pts for Skaven, 1 for everyone else.",
+   "description" : "The most infamous and thrice cursed of all the encampments is the home of the scum of the land. Evil and unsavory characters walk on the area without fear, as if they own it ... and they probably do! Anyone with gold is allowed in and those without tend to find their hands in other people's pockets. In Cutthroat's Haven (if you can call it a haven) possessed walking the streets is a common site, as are undead and even Skaven. Fights break out routinely and only the most daring or stupid of merchants sell their wares here. It is said, 'Anything can be bought for a price in the Cutthroat's Haven!'. \n\nAll rare goods are at a +2 to find but cost twice what they would normally.\n\nScenarios 1-9 (RB), 'Ambush' (A02)."
+},
+{
+   "name" : "Executioner's Square",
+   "cpv" : "2 pts for Witch Hunters, Possessed and Undead, 1 for everyone else.",
+   "description" : "Before the comet hit, facing exorbitant taxes, the good people of Mordheim became desperate and crime began to escalate. As The Gaol became full with petty criminals, public executions seem like a good measure of determent. Farther than that, the public sadistic tendencies created this as entertainment ventures, and soon the city started charging fees for those attending the macabre spectacles. Furthermore, the executions became increasingly gruesome and cruel. When the disaster struck, a record crowd was gathered here to enjoy the execution of Gunther Griswald. This petty thief was condemned to be fed alive to stripper worms.\n\nNow it is rumored to be haunted by those who, unjustified, were tortured and executed here.\n\nScenarios 1-9 (RB), 'Ambush' (A02)."
+},
+{
+   "name" : "Great Library of Mordheim",
+   "cpv" : "3",
+   "description" : "The Great Library of Mordheim has been a shining star in the Empire. Many ancient tomes regarding everything from unusual anatomies to old family recipes can be found here. When the rioting crowd reached the Library, many of the priceless tomes were either ruined or stolen, especially the entire Martha Steinhart (not related) on cooking series. Not all the books left behind were worthless though. Many of the books written in long dead languages were ignored and can still be found amongst the destroyed shelves. \n\nIf a warband remains in the area, spends a turn looting and does not engage in any battles or are attacked, they may find some of the lost tomes. This can only be done once per game. Roll a d6 for each item on the list, an item is found if the roll meets the requirements. Book of the Dead (6+); Tome of Magic (6+); (Un) Holy Tome (5+); (Un) Holy relic (4+); Halfling Cookbook (3+); Lantern (3+) \n\nScenarios 1-9 (RB), ‘The Wizard's Mansion’ (A02), ‘The Mummy!’ (TC15)."
+},
+{
+   "name" : "Halibut",
+   "cpv" : "1",
+   "description" : "Located between the Great Library and the City Walls, this was formerly a predominantly Sigmarite residential area and also the only area that was left virtually intact.\n\nScenarios 1-9 (RB), 'Kidnapped' (A02), 'Ambush' (A02)."
+},
+{
+   "name" : "Herring",
+   "cpv" : "2 pts for all human mercenary, 1 for everyone else.",
+   "description" : "Located near Raven Barracks, this used to be the Ulrican Quarter and where the Middenheimers, Ostlanders and Kislevites lived. Ulricans used to keep vicious guard dogs to discourage Sigmarite visitors. Now the area is abandoned and the effects of the Wyrdstone had mutated the dogs to an even higher level of horror. \n\nMiddenheimers, Ostlanders and Kislevites warbands know the general layout of this area very well (it is modeled after a military standard pattern) so they may infiltrate (as per Skaven skill p93) up to 3 models onto the board. \n\nScenarios 1-9 (RB), 'Kidnapped' (A02), 'Ambush' (A02)."
+},
+{
+   "name" : "Imperial Armory",
+   "cpv" : "2 pts for Bretonnian Knights and all human mercenary, 1 for everyone else.",
+   "description" : "In this former collection of buildings was located the Imperial Engineers of Mordheim and their Armory. Much of what was value has already been confiscated. Still, people have come out of Mordheim with weapons of tremendous power and unusual human design. The only place in Mordheim they could have come from is here at the Armory. There must be some secret rooms located in the basements. The Imperial Engineers guarded their secret designs well. Many of the Engineers left before the comet fell, seeing the madness of Count Steinhardt growing. They were able to lock up their constructions many levels underground in vaults that could rival Dwarfs in their strength. \n\nIf a warband remains in the area, spends a turn looting and does not engage in any battles or are attacked, they will get to roll once for each hero: on a roll of 4+ roll again for the Gunsmith (pg 138), on a roll of 5+ roll again for the Armourer (pg138), on a roll of 6 roll once for the Dwarf Smithy (pg 140). A warband can only roll once per campaign and can only get one roll on each table so there is no need to search it twice and it is best done when you have a full amount of Heroes. \n\nScenarios 1-9 (RB), ‘Ambush’ (A02)."
+},
+{
+   "name" : "Imperial Stables",
+   "cpv" : "2 pts for Bretonnian Knights, 1 for everyone else.",
+   "description" : "Once the home of the finest of horses outside of Araby, the Emperor’s own horses were once raised here in Mordheim. Count Steinhardt spent lavishly on the stables. The horses were equipped with the finest leather saddles and ate the finest oats. In the last days of Mordheim, the Count unleashed his mounted troops on the people. They were able to clear entire streets at a time until the townsfolk eventually brought down the mounted knights.\n\n Warband is affected by Looting (Advanced Rules) even if battles took place during the turn. \n\nScenarios 1-9 (RB), 'Kidnapped' (A02), ‘Ambush’ (A02)."
+},
+{
+   "name" : "Inventors",
+   "cpv" : "1",
+   "description" : "Located north of The Gaol, this is where the engineers and scholars lived, many libraries, workshops, apothecaries and small colleges once stood. Now the area is abandoned and the inventions and knowledge there spawned, now lays corrupt waiting for its next victim.\n\nThe winning warband may find one item, roll twice 1D6 and pick one: 1-2 Lantern, 3: Halfling Cookbook, 4: Healing Herbs; 5: Tome of Magic; 6: Mordheim Map. \n\nScenarios 1-9 (RB)."
+},
+{
+   "name" : "Market Square",
+   "cpv" : "2",
+   "description" : "The center of Mordheim’s commerce, the Market Square sold anything that was available to the Empire. Fine wines from Bretonnia, soft silks from Tilea, and warm furs from Kislev. Everything could be found here, if you knew whom to ask. Now, the only thing one could surely find within is a horrible death. \n\nThe area is so rich that if a warband remains in the area, spends a turn looting and does not engage in any battles or are attacked, they may roll for Exploration, based on the number of uninjured heroes. This may be done once per campaign. \n\nScenarios 1-9 (RB), ‘Cry of the Banshee’ (TC18), 'Kidnapped' (A02), ‘The Lost Prince’"
+},
+{
+   "name" : "Merchant’s Quarters",
+   "cpv" : "2",
+   "description" : "The fat moneylenders had to live somewhere, where better than near the Barracks. Everyone knows the Merchant’s kept the valuable items at their own homes. The problem was nobody could get them when the entire Town Guard was house across the street. \n\nThe area is so rich that if a warband remains in the area, spends a turn looting, and does not engage in any battle, they may roll for Exploration, based on the number of uninjured heroes, with 4 rerolls. This may be done once per campaign. \n\nScenarios 1-9 (RB), 'Cry of the Banshee' (TC18), 'Kidnapped' (A02), 'The Lost Prince' (A02)."
+},
+{
+   "name" : "Metal Workers",
+   "cpv" : "2 pts for Dwarf, 1 for everyone else.",
+   "description" : "Part of the Rich Quarter, this is where the metals workers lived and worked. This busy district also housed a small Dwarf community.\n\nDwarfs get an additional dice for the Exploration chart, as they know this Quarter better than anyone else… alive that is! \n\nScenarios 1-9 (RB)."
+},
+{
+   "name" : "Mordheim Breweries",
+   "cpv" : "2 pts for Dwarf and Pirate, 1 for everyone else.",
+   "description" : "Not long before the fall of the comet, local breweries were all the rage. Mordheim had a special ale called Serpent’s Bile that could rival Bugman’s Brew in taste and efficacy. Every Dwarf knew this brew must have come from a fellow dwarf, but who would give their secret to the humans? There are some who would pay a dear price for the recipe of Serpent’s Bile. The Dwarf’s would like to prevent that.\n\nThe winning warband may find a couple of items in an abandoned warehouse. Roll 1D6 for each Hero: 1-3: Bugman's Brew, 4: Serpent’s Bile (same as Bugman’s Brew + 1S, +1T, -1WS, -1BS), 5: Lantern, 6: Gromril Axe. \n\nScenarios 1-9 (RB), 'Kidnapped' (A02), 'Ambush' (A02)."
+},
+{
+   "name" : "Mordheim University",
+   "cpv" : "2",
+   "description" : "Once, Mordheim University aspired to be the center of learning of the Empire, as the race for the largest library intensified. The University itself was scattered amongst several buildings, many of them former small homes. The school is now in ruins, any books or articles of importance have been removed. Oddly enough though the grounds of the Botany Department still seem to be untouched. Their scholastic recruitment slogan, “Come join us at MU, you have a blast!” proved to be prophetic. \n\nThere is a Witch that still lives at the College refusing to leave. A warband can buy poisons, drugs, garlic, healing herbs, or Tears of Shallaya at base price. The hero still has to roll for availability. She cares for her plants too much to hand them over and if you kill her how will her garden grow? \n\nScenarios 2, 4, 6 (RB), 'The Pool' (A02), 'Monster Hunt' (A02)."
+},
+{
+   "name" : "Nightshade",
+   "cpv" : "2 pts for evil, 1 for everyone else.",
+   "description" : "Just east of The Pit, the Nightshade is a devastated collective ruin. One of the most dangerous areas of Mordheim.\n\nScenarios 1-9 (RB), 'Monster Hunt' (A02)"
+},
+{
+   "name" : "Palace Gardens",
+   "cpv" : "1",
+   "description" : "These lushly overgrown gardens were once the decorated walkway to the Palace. While the Palace itself sustained heavy damage by the comet, its gardens seem almost untouched. The plants here grow at an alarming rate, and mutations are starting to occur. Due to the thick canopy, the trees have completely blocked out the sun. \n\nScenarios 2, 4, 6 (RB), 'The Pool' (A02), 'Monster Hunt' (A02)."
+},
+{
+   "name" : "Pleasure District",
+   "cpv" : "2 pts for Orcs & Goblins Hordes and all human mercenary, 1 for everyone else.",
+   "description" : "The once very prosperous Wench Alley, with its red tinged lanterns, was popular with the poor and the rich as well as locals and visitors alike. Of course there were those against these adulterous and seedy acts. Still, this lively street had a large, if quiet, backing from the town itself.\n\nScenarios 1, 5, 6, (RB), 'Kidnapped' (A02), 'Ambush' (A02)."
+},
+{
+   "name" : "Quayside",
+   "cpv" : "2 pts for Pirates, 1 for everyone else.",
+   "description" : "A suitable name for the docks and warehouses along the Stir. At one time this area, including the Middle Bridge, was the center of all river-bound commerce of the area and its surrounding market places the envy of the Empire, and later defiled by the corrupted Trade Guilds. Now the quarter is a diabolical mockery of all that it once was. Supernatural fires still burn in many places and at night the whole area glows with a macabre orange hue.\n\nThe winning warband may find a couple of items in an abandoned warehouse. On a roll of 4+ on each Hero, roll 1D6 for each: 1-3: Net, 4: Rope & Hook, 5: Lantern, 6: Boat Hook (Pirate Warband - TC9).\n\nScenarios 1-9 (RB), 'Ambush'"
+},
+{
+   "name" : "Raven Barracks",
+   "cpv" : "1",
+   "description" : "The Mordheim Guards were once housed here. The stone walls could not hold back the anger of the city. This was the last bastion of the Town Guard as the city rose up against them and their draconic measures to secure peace. Some say the Guards were simply being heavy handed in order to use fear to quell the crowds. Still others say the Town Guard appeared to smile as they swung their swords and loosed their arrows. Either way, this was their final home.\n\nAny warband that captures this area may roll once for the Smithy (RB p137) from the Exploration Chart.\n\nScenarios 1-9 (RB), 'Ambush' (A02)."
+},
+{
+   "name" : "Rat Hunters – Poor Quarter",
+   "cpv" : "2 pts for Skaven, 1 for everyone else.",
+   "description" : "The poor quarter, located south-west between the Temple of Morr and the River Stir, where when even before the comet, plague and hunger were the inhabitants' constant companions. Much has changed now as the derelict hovels were mostly flattened by the impact and the rats are larger and some say bipedal…\n\nAny model that is more than 6” away from another friendly unit must make an All Alone Test. If it is failed then the model is taken Out of Action (OOA), but is not injured. \n\nScenarios 1-9 (RB), 'Lair of the Snake' (TC9)."
+},
+{
+   "name" : "Rich Quarter",
+   "cpv" : "1",
+   "description" : "Where the rich and famous lived and died when disaster struck. This was the rich quarter, which means there is more stuff lying around and more valuable items to be found.\n\nThe winning warband may find luxury items, roll twice 1D6: 1-3: 2D6 gc, 4: Ithilmar Sword; 5: Cathayan Silk Clothes; 6: Crossbow Pistol. \n\nScenarios 1-9 (RB), 'Cry of the Banshee' (TC18), 'Kidnapped' (A02), 'The Lost Prince' (A02)."
+},
+{
+   "name" : "Rupert von Endon's Amphitheater",
+   "cpv" : "2 pts for Pit Fighter and Carnival of Chaos, 1 for everyone else.",
+   "description" : "By day the Amphitheatre was a Golden Building known for its puppet shows and other plays put on by playwrights of the Empire. By Night it was known as the Blood Theatre for that was when it became host to the Gladiatorial games. Pit fighting was outlawed in the Empire, but Count Steinhardt denied it existed even though he was the regularly the Host of Honor. One of the more bizarre highlights of the Theatre would be when Hedge wizards and warlocks who had been captured in battle would be forced to fight each other in awesome magical duels.\n\nAll rolls for magic subtract 1 from their rolls on 2d6 when attempting to cast a spell due to the anti-magic defenses of the building, except for the Carnival of Chaos warband. Furthermore this warband always decides who starts combat. \n\nScenarios 1-9 (RB), 'Ambush' (A02)."
+},
+{
+   "name" : "Sigmarheaven",
+   "cpv" : "2 pts for Witch Hunters and Sisters of Sigmar, 1 for everyone else.",
+   "description" : "This is the last bastion of hope and goodwill around Mordheim. Founded my Sigmarites, is by far the safest of all settlements as a local militia is maintained by the tithe paid by all its inhabitants. Sisters of Sigmar, Witch Hunters and human mercenaries abound here.\n\nScenarios 1-9 (RB), 'Ambush' (A02)."
+},
+{
+   "name" : "Statue of Count Gotthard",
+   "cpv" : "1",
+   "description" : "This remarkable landmark once depicted a statue of Count Gotthard, founder of Mordheim and hero to its people, but was replaced by a statue of Count Steinhardt, which provoked the famous riots of 1979. Nobles and Merchants hired mercenaries to quench the rebels, and after their work was done they stayed, bullying their way around the common folk. People who witnessed the Wrath of Sigmar say that Steinhardt's statue now appears to reflect the Count's decadent soul.\n\nScenarios 1-9 (RB), 'Kidnapped' (A02), 'Ambush' (A02)."
+},
+{
+   "name" : "Steinhardt Memorial Gardens",
+   "cpv" : "1",
+   "description" : "An eerie place of twisted trees, crumbled fountains, and blasted gardens remains in mockery of this once spectacular garden. The Undead obviously love it here... such a large graveyard will always attract its share of restless dead.\n\nScenarios 2, 4, 6 (RB), 'The Pool' (A02), 'Monster Hunt' (A02)."
+},
+{
+   "name" : "Temple of Morr",
+   "cpv" : "2 pts for Possessed and Undead, 1 for everyone else.",
+   "description" : "The acolytes of Morr tended to the gardens of the Cemetery of St. Voller from this small church. The dour faced priests had their arms and temple full from the dead they had to see to. There was no way the priests could keep up; still, they tried. Many townspeople tried to assist in the removal of bodies. Unknowingly, one of these persons was Marius Dire, a Necromancer. The priests had, unwittingly, allowed access to the dead, a person who would undermine their entire effort. Soon, one by one, the bodies rose and began to dig up the newly buried inhabitants. Marius was successful in usurping the priests. Many of the Morr priests were slaughtered, yet one did escape.\n\nScenarios 1-9 (RB), 'Cry of the Banshee' (TC18), 'Kidnapped' (A02)."
+},
+{
+   "name" : "Temple of Sigmar",
+   "cpv" : "4 pts for Sisters of Sigmar and Witch Hunters, 2 for everyone else.",
+   "description" : "The most powerful church in the Empire belongs to Sigmar. In most cities the Temple of Sigmar is the seat of political power. In Mordheim, the Temple is practically the center of all activities. From its location it is easily accessible to the rich and poor alike. When the comet hit, the entire city was sure that the Temple was destroyed. When the smoke cleared, by the Grace of Sigmar himself, the Church and all of its spires remained standing and apparently unharmed. The Temple is the only true location of safety in the entire city. \n\nSisters, Witch Hunters, and any other human non-evil warband that holds the Temple of Sigmar can ignore a result requiring a character to miss a game due to injury. The healing power of Sigmar magically brings the character back to full health on a roll of 5+. No effects on previous/permanent injuries. \n\nScenarios 1-9 (RB), 'Cry of the Banshee' (TC18), 'Kidnapped' (A02)."
+},
+{
+   "name" : "The Devil's Den",
+   "cpv" : "1",
+   "description" : "This area of used to harbor many shady characters that normally resided at the Poor Quarters, along with the Rat Hunters. This area was hit the hardest when the comet arrived. The people of this area were not prepared and had the least amount of resources to lose. Many of the inhabitants of this area resorted to many despicable acts in order to survive. If anyone could control or contain the horde of people living here, they could potentially have a mob of eager followers.\n\nAny model that is more than 6” away from another friendly unit must make an All Alone Test. If it fails then the model is taken Out of Action (OOA), but is not injured. \n\nScenarios 1-9 (RB), 'Kidnapped' (A02), 'Ambush' (A02)."
+},
+{
+   "name" : "The Gaol",
+   "cpv" : "2 pts for Beastmen, 1 for everyone else.",
+   "description" : "This is where the infamous prison once stood. Unfortunately, the men behind bars survived Sigmar's Wrath better than their guards. Months after the disaster some are still prisoners, now mad from the trauma, and their maddening howls filled the night's air. Other hundreds were liberated by the comet's blast and now roam the area in violent gangs of scavengers and cannibals. To make matters worse, for years a twisted vampire had lain hidden within the cellars and vaults of the old Gaol. After a pitiful self-exile, he and his coven used the holocaust as a way to bring chaos and death to all the area inhabitants.\n\nSkaven get an additional dice for the Exploration chart. \n\nScenarios 1-9 (RB), ‘Street Brawl’ (A02)."
+},
+{
+   "name" : "The Pit",
+   "cpv" : "5",
+   "description" : "A glimpse of Hell in the very heart of the Empire, this is The Pit! There are no houses nor ruins here... just desolate nightmarish rubble. This is, by far, the most dangerous part of Mordheim.\n\nThis is a veritable gold mine... Wyrdstone mine, actually! \n\nEvil warbands always decides who starts combat. The winning warband gathers an extra D6 wyrdstone beyond what is found. The area all around The Pit’s area seems to have been barricaded. A warband needs resources in order to enter into this area. As such, a warband needs to have at least 10 Campaign Points for this undertaking. If a warband loses control of The Pit’s area, that warband also loses d3 areas as the band is routed. These must be pins nearest the area. \n\nScenarios 2, 4, 9 (RB), ‘Scourge & Purge’ - no buildings (TC7), ‘That's All Mine!’ - no buildings (TC10)"
+},
+{
+   "name" : "The Rock",
+   "cpv" : "4 pts for Sisters of Sigmar, 2 for everyone else .",
+   "description" : "The main Abbey of the Sisters of Sigmar is located on a small island on the River Stir. This proud monument has not only stood for centuries, but also remained unharmed by the devastation caused by the two-tailed comet. The Rock is the only beacon of light in Mordheim, as the Sisters continue their never-ending quest against evil, undead, Chaos and criminal masterminds who constantly attempt to take their Abbey and Mordheim for their nefarious intents.\n\nSisters of Sigmar in this area can ignore a result requiring a character to miss a game due to injury. The healing power of Sigmar magically brings the character back to full health. \n\nScenarios 2, 4, 6, 9 (RB), ‘The Script of Sigmar’ (TC9)"
+},
+{
+   "name" : "The Shades",
+   "cpv" : "3 pts for Bretonnian Knights, 1 for everyone else.",
+   "description" : "This dark area borders The Pit and it is almost as bad... Bretonnian Knights, who seek entrance to The Pit, make their first stance against evil here.\n\nScenarios 1-9 (RB), ‘Monster Hunt’ (A02), ‘Scourge & Purge’ (TC7), ‘That's All Mine!’ (TC10)."
+},
+{
+   "name" : "Wizard's Mansion",
+   "cpv" : "4",
+   "description" : "The very walls of the Wizard's Mansion are saturated with the magic of slain wizards. Many times strange lights and sounds have been heard coming from the tower. Of all the locales that have been looted, this is one that seems to remain untouched. The Mansion is said to be filled with many wondrous potions and magical items. Only the brave tempt the spells and wards that protect these buildings. Those that do may be brave, but they may also be dead for they are never seen again. \n\nUse the Wizard’s Mansion Special Scenario for any battles that take place here. If a warband remains in the area, spends a turn looting and does not engage in any battles or are attacked, they may search for magic items left behind. Choose a Hero to search, make a Toughness roll on a d6. If the warrior fails, then the search has failed, roll on the injury chart as the Hero has come across a wizard’s ward or has drunk something he shouldn’t have. If he succeeds, roll 3d6, if the result is an 18, the Hero has found a magical item; any other result is the amount of gold found instead of looting. \n\nScenarios 1-9 (RB), ‘The Wizard's Mansion’ (A02), ‘The Mummy!’"
+}
+]

@@ -95,7 +95,11 @@ class App extends Component {
           })
           
         } else if (rsp.status == 401) {
-          this.setState({showFailedLogon: true})
+          this.setState(
+            {
+              showFailedLogon: true,
+              showLoginModal: true
+          })
         } else {
           throw new Error("Failed logon")
         }
