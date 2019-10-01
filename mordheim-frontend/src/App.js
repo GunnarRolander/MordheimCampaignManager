@@ -47,11 +47,11 @@ class App extends Component {
         {showMapAndAdmin ? 
           <Grid>
             <Row className="show-grid">
-              <Col className="customCol" xs={9} sm={9} md={9}>
+              <Col className="customCol" xs={9} sm={9} md={9} xs={12}>
                 <Map visiblePlaces={this.state.warband.visible_places} allPlaces={this.state.warband.all_places} visibleLinks={this.state.warband.visible_links} 
                 visibleWarbands={this.state.warband.visible_warbands} battles={this.state.warband.battles}/>
               </Col>
-              <Col className="customCol" xs={3} sm={3} md={3}>
+              <Col className="customCol" xs={3} sm={3} md={3} xs={12}>
                 <AdministrationPanel warband={this.state.warband} refresh={() => this._authenticate(this.state.username, this.state.password)}></AdministrationPanel>
               </Col>
             </Row>
