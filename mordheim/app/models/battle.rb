@@ -17,7 +17,7 @@ class Battle < ApplicationRecord
     examined_places = [self.place].to_set
     places_to_examine = examined_places
 
-    while(true && i)
+    while(true)
       places_to_examine = places_to_examine.map{ |place| place.linked_places }.flatten.to_set
       places_to_examine = places_to_examine.subtract(examined_places)
 
